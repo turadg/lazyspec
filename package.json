@@ -1,0 +1,24 @@
+{
+  "name": "lazytest",
+  "version": "0.1.0",
+  "description": "Generates minimal unit tests for you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turadg/lazytest.git"
+  },
+  "keywords": [
+    "javascript",
+    "unit",
+    "test"
+  ],
+  "author": "Turadg Aleahmad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turadg/lazytest/issues"
+  },
+  "homepage": "https://github.com/turadg/lazytest#readme"
+}
