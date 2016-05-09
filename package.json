@@ -1,29 +1,34 @@
 {
-  "name": "lazytest",
-  "version": "0.1.0",
-  "description": "Generates minimal unit tests for you",
-  "main": "index.js",
+  "name": "lazyspec",
+  "version": "1.0.0",
+  "description": "Generate minimal unit tests automatically",
+  "bin": {
+    "lazyspec": "./cli.js"
+  },
   "scripts": {
     "test": "eslint . && echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turadg/lazytest.git"
+    "url": "git+https://github.com/turadg/lazyspec.git"
   },
   "keywords": [
     "javascript",
-    "unit",
-    "test"
+    "spec",
+    "test",
+    "jasmine"
   ],
   "author": "Turadg Aleahmad",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/turadg/lazytest/issues"
+    "url": "https://github.com/turadg/lazyspec/issues"
   },
-  "homepage": "https://github.com/turadg/lazytest#readme",
+  "homepage": "https://github.com/turadg/lazyspec#readme",
   "dependencies": {
     "babylon": "^6.8.0",
-    "lodash": "^4.12.0"
+    "glob": "^7.0.3",
+    "lodash": "^4.12.0",
+    "mkdirp": "^0.5.1"
   },
   "devDependencies": {
     "eslint": "^2.9.0",

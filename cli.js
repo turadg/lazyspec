@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --harmony_destructuring
 
 'use strict'; // eslint-disable-line
 
@@ -12,7 +12,7 @@ const describeModule = require('./lib/describeModule');
 const importDeclaration = require('./lib/importDeclaration');
 const specUnit = require('./lib/styles/jasmine');
 
-const { unitToSpec, specToUnit} = require('./lib/layouts/loloTests');
+const { unitToSpec } = require('./lib/layouts/loloTests');
 
 const parseOptions = {
   ecmaVersion: 7,
@@ -45,6 +45,7 @@ for (const unitPath of unitPaths) {
     console.log('Processing', unitPath);
     if (err) {
       console.log(err);
+      return;
     }
 
     const pathInfo = path.parse(unitPath);
