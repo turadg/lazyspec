@@ -22,4 +22,8 @@ For every `.js` file under the path, lazyspec will generate a corresponding spec
 
 Support more than [Jasmine](http://jasmine.github.io/) style. If you need another style, please file an issue or PR.
 
-Shallow render React components when valid props can be generated.
+Shallow render React components when valid props can be generated. Using react-docgen.
+https://github.com/reactjs/react-docgen/blob/master/bin/react-docgen.js
+https://github.com/reactjs/react-docgen/blob/master/src/parse.js
+
+rm /Users/turadg/Remind/r101-frontend/src/admin/components/__tests__/ReportTeacherModal-test.js || true && ./src/cli.js ~/Remind/r101-frontend/src/admin/components/

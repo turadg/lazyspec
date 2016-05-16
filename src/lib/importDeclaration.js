@@ -1,5 +1,3 @@
-'use strict';
-
 function getBindings(moduleInfo) {
   const hasDefault = !!moduleInfo.exportsDefault;
   const hasNames = moduleInfo.namedExportNames.length > 0;
@@ -13,7 +11,7 @@ function getBindings(moduleInfo) {
   }
   if (hasNames) {
     const names = moduleInfo.namedExportNames.join(', ');
-    bindings += `{${names}}`;
+    bindings += `{ ${names} }`;
   }
   return bindings;
 }

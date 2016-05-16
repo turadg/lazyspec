@@ -1,5 +1,7 @@
 const _ = require('lodash');
 
+const describeReact = require('./describeReact');
+
 function nameExports({ declaration, specifiers }) {
   if (!declaration) {
     return specifiers.map(s => s.exported.name);
@@ -12,16 +14,13 @@ function nameExports({ declaration, specifiers }) {
   throw new Error('unknown named export type');
 }
 
-function describeModule(pathName, ast) {
+function describeExports(moduleName, ast) {
   const body = ast.program.body;
 
   const namedExports = body.filter(node => node.type === 'ExportNamedDeclaration');
   const namedExportNames = _.flatMap(namedExports, nameExports);
 
   const defaultExport = body.find(node => node.type === 'ExportDefaultDeclaration');
-
-  // '-' is not valid in a Javascript symbol
-  const moduleName = pathName.replace('-', '_');
 
   const defaultExportedAsName = _.includes(namedExportNames, moduleName);
 
@@ -36,6 +35,22 @@ function describeModule(pathName, ast) {
     moduleName,
     namedExportNames,
   };
+}
+
+function describeModule(pathName, ast) {
+  // '-' is not valid in a Javascript symbol
+  const moduleName = pathName.replace('-', '_');
+
+  const description = describeExports(moduleName, ast);
+
+  const hasReact = pathName.endsWith('.jsx'); // roughly
+
+  if (hasReact) {
+    const reactDescription = describeReact(ast);
+    Object.assign(description, reactDescription);
+  }
+
+  return description;
 }
 
 module.exports = describeModule;

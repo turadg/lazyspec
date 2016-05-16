@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Generate minimal unit tests automatically",
   "bin": {
-    "lazyspec": "./cli.js"
+    "lazyspec": "./src/cli.js"
   },
   "scripts": {
-    "test": "eslint . && echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -25,14 +25,16 @@
   },
   "homepage": "https://github.com/turadg/lazyspec#readme",
   "dependencies": {
-    "babylon": "^6.8.0",
     "glob": "^7.0.3",
     "lodash": "^4.12.0",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "react-docgen": "^2.8.2"
   },
   "devDependencies": {
     "eslint": "^2.9.0",
     "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.7.0"
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-plugin-jasmine": "^1.8.1",
+    "jasmine": "^2.4.1"
   }
 }

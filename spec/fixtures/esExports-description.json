@@ -1,0 +1,11 @@
+{
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "spec/fixtures/esExports.js",
+  "namedExportNames": [
+    "refConst",
+    "refFunc",
+    "inlineConst",
+    "inlineFunc"
+  ]
+}

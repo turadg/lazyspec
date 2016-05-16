@@ -1,5 +1,3 @@
-'use strict'; // eslint-disable-line
-
 function shouldExist(unitName) {
   return `
 describe('${unitName}', () => {

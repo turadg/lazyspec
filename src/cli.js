@@ -1,8 +1,5 @@
-#!/usr/bin/env node --harmony_destructuring
+#!/usr/bin/env node --harmony
 
-'use strict'; // eslint-disable-line
-
-const babylon = require('babylon');
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
@@ -11,37 +8,17 @@ const mkdirp = require('mkdirp');
 const describeModule = require('./lib/describeModule');
 const importDeclaration = require('./lib/importDeclaration');
 const specUnit = require('./lib/styles/jasmine');
+const parseModule = require('./lib/parseModule');
 
 const { unitToSpec } = require('./lib/layouts/loloTests');
 
-const parseOptions = {
-  ecmaVersion: 7,
-  sourceType: 'module',
-  plugins: [
-    'asyncFunctions',
-    'asyncGenerators',
-    'classConstructorCall',
-    'classProperties',
-    'decorators',
-    'doExpressions',
-    'exponentiationOperator',
-    'exportExtensions',
-    'flow',
-    'functionSent',
-    'functionBind',
-    'jsx',
-    'objectRestSpread',
-    'trailingFunctionCommas',
-  ],
-};
-
 const rootPath = process.argv[2];
 
-const unitPaths = glob.sync('/**/*.js', { root: rootPath })
+const unitPaths = glob.sync('/**/*.js?(x)', { root: rootPath })
   .filter(src => src.indexOf('__tests__') === -1);
 
 for (const unitPath of unitPaths) {
-  fs.readFile(unitPath, 'utf8', (err, data) => {
+  fs.readFile(unitPath, 'utf8', (err, src) => {
     console.log('Processing', unitPath);
     if (err) {
       console.log(err);
@@ -59,7 +36,8 @@ for (const unitPath of unitPaths) {
     // why doesn't `relative` work without the slice?
     const importPath = path.relative(specPath, unitPath).slice(3);
 
-    const ast = babylon.parse(data, parseOptions);
+    const ast = parseModule(unitPath, src);
+
     const moduleInfo = describeModule(pathInfo.name, ast);
 
     if (!moduleInfo.hasExports) {
@@ -73,9 +51,9 @@ for (const unitPath of unitPaths) {
     const fileContents = `${importLine}\n${jasmineSpec}`;
 
     mkdirp(path.dirname(specPath));
-    fs.writeFile(specPath, fileContents, 'utf8', (err, data) => {
-      if (err) {
-        console.error(err);
+    fs.writeFile(specPath, fileContents, 'utf8', (err2, data) => {
+      if (err2) {
+        console.error(err2);
       } else {
        console.log(`Created spec ${specPath}`);
       }
