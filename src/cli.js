@@ -24,55 +24,62 @@ const lazyManaged = (specPath) => {
   return specSrc.startsWith('/* @lazyspec');
 };
 
-for (const unitPath of unitPaths) {
-  fs.readFile(unitPath, 'utf8', (err, src) => {
-    console.log('Processing', unitPath);
-    if (err) {
-      console.log(err);
+const processUnit = (unitPath, src) => {
+  console.log('Processing', unitPath);
+  const pathInfo = path.parse(unitPath);
+  const specPath = unitToSpec(unitPath);
+
+
+  if (fs.existsSync(specPath)) {
+    if (lazyManaged(specPath)) {
+      console.warn(`Overwriting existing lazy spec ${specPath}`);
+    } else {
+      console.warn(`Leaving existing unlazy spec ${specPath}`);
       return;
     }
+  }
 
-    const pathInfo = path.parse(unitPath);
-    const specPath = unitToSpec(unitPath);
+  const ast = parseModule(unitPath, src);
 
+  const moduleInfo = describeModule(pathInfo.name, ast);
 
-    if (fs.existsSync(specPath)) {
-      if (lazyManaged(specPath)) {
-        console.warn(`Overwriting existing lazy spec ${specPath}`);
-      } else {
-        console.warn(`Leaving existing unlazy spec ${specPath}`);
-        return;
-      }
-    }
+  if (!moduleInfo.hasExports) {
+    console.warn('No exports in', unitPath);
+    return;
+  }
 
+  // why doesn't `relative` work without the slice?
+  const importPath = path.relative(specPath, unitPath).slice(3);
 
-    const ast = parseModule(unitPath, src);
+  const importLine = importDeclaration(moduleInfo, importPath);
+  const jasmineSpec = specUnit(moduleInfo, importPath);
 
-    const moduleInfo = describeModule(pathInfo.name, ast);
-
-    if (!moduleInfo.hasExports) {
-      console.warn('No exports in', unitPath);
-      return;
-    }
-
-    // why doesn't `relative` work without the slice?
-    const importPath = path.relative(specPath, unitPath).slice(3);
-
-    const importLine = importDeclaration(moduleInfo, importPath);
-    const jasmineSpec = specUnit(moduleInfo, importPath);
-
-    const fileContents = `/* @lazyspec (remove to manage manually) */
+  const fileContents = `/* @lazyspec (remove to manage manually) */
+/* eslint-disable max-len */
 ${importLine}
 ${jasmineSpec}
 `;
 
-    mkdirp(path.dirname(specPath));
-    fs.writeFile(specPath, fileContents, 'utf8', (err2) => {
-      if (err2) {
-        console.error(err2);
-      } else {
-        console.log(`Created spec ${specPath}`);
-      }
-    });
+  mkdirp(path.dirname(specPath));
+  fs.writeFile(specPath, fileContents, 'utf8', (err2) => {
+    if (err2) {
+      console.error(err2);
+    } else {
+      console.log(`Created spec ${specPath}`);
+    }
+  });
+};
+
+for (const unitPath of unitPaths) {
+  fs.readFile(unitPath, 'utf8', (err, src) => {
+    if (err) {
+      console.log('Could not read', unitPath, err);
+      return;
+    }
+    try {
+      processUnit(unitPath, src);
+    } catch (ex) {
+      console.error('Could not process unit', unitPath);
+    }
   });
 }

@@ -11,7 +11,7 @@ function getBindings(moduleInfo) {
   }
   if (hasNames) {
     const names = moduleInfo.namedExportNames.join(', ');
-    bindings += `{ ${names} }`;
+    bindings += `{${names}}`;
   }
   return bindings;
 }
