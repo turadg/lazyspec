@@ -37,18 +37,11 @@ function describeExports(moduleName, ast) {
   };
 }
 
-function describeModule(pathName, ast) {
-  // '-' is not valid in a Javascript symbol
-  const moduleName = pathName.replace('-', '_');
-
+function describeModule(moduleName, ast) {
   const description = describeExports(moduleName, ast);
 
-  const hasReact = pathName.endsWith('.jsx'); // roughly
-
-  if (hasReact) {
-    const reactDescription = describeReact(ast);
-    Object.assign(description, reactDescription);
-  }
+  const reactDescription = describeReact(ast);
+  Object.assign(description, reactDescription);
 
   return description;
 }

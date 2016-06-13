@@ -24,7 +24,7 @@ describe('parseModule', () => {
 
   it('should parse a simple React component', () => {
     expectAst(
-      'spec/fixtures/Button.jsx',
+      'spec/fixtures/Button.js',
       'spec/fixtures/Button-ast.json'
     );
   });

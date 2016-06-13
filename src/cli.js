@@ -41,18 +41,20 @@ const processUnit = (unitPath, src) => {
 
   const ast = parseModule(unitPath, src);
 
-  const moduleInfo = describeModule(pathInfo.name, ast);
+  // '-' is not valid in a Javascript symbol and the separator isn't important for the spec
+  const moduleName = pathInfo.name.replace('-', '');
+  const moduleInfo = describeModule(moduleName, ast);
 
   if (!moduleInfo.hasExports) {
     console.warn('No exports in', unitPath);
     return;
   }
 
+  const jasmineSpec = specUnit(moduleInfo);
+
   // why doesn't `relative` work without the slice?
   const importPath = path.relative(specPath, unitPath).slice(3);
-
   const importLine = importDeclaration(moduleInfo, importPath);
-  const jasmineSpec = specUnit(moduleInfo, importPath);
 
   const fileContents = `/* @lazyspec (remove to manage manually) */
 /* eslint-disable max-len */

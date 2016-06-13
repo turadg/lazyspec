@@ -2,10 +2,14 @@ const fs = require('fs');
 
 const describeModule = require('../../src/lib/describeModule');
 
-function expectDescription(unitPath, astPath, descriptionPath) {
+function expectDescription(moduleName) {
+  const unitPath = `spec/fixtures/${moduleName}.js`;
+  const astPath = `spec/fixtures/${moduleName}-ast.json`;
+  const descriptionPath = `spec/fixtures/${moduleName}-description.json`;
+
   const ast = JSON.parse(fs.readFileSync(astPath));
 
-  const description = describeModule(unitPath, ast);
+  const description = describeModule(moduleName, ast);
 
   // for updating
   // fs.writeFileSync(descriptionPath, JSON.stringify(description));
@@ -17,18 +21,10 @@ function expectDescription(unitPath, astPath, descriptionPath) {
 
 describe('describeModule', () => {
   it('should describe simple exports', () => {
-    expectDescription(
-      'spec/fixtures/esExports.js',
-      'spec/fixtures/esExports-ast.json',
-      'spec/fixtures/esExports-description.json'
-    );
+    expectDescription('esExports');
   });
 
   it('should describe a simple component', () => {
-    expectDescription(
-      'spec/fixtures/Button.jsx',
-      'spec/fixtures/Button-ast.json',
-      'spec/fixtures/Button-description.json'
-    );
+    expectDescription('Button');
   });
 });
