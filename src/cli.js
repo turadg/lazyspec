@@ -57,6 +57,7 @@ const processUnit = (unitPath, src) => {
   const importLine = importDeclaration(moduleInfo, importPath);
 
   const fileContents = `/* @lazyspec (remove to manage manually) */
+/* @flow */
 /* eslint-disable max-len */
 ${importLine}
 ${jasmineSpec}
