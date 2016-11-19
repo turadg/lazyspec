@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const parseModule = require('../../src/lib/parseModule');
+const parseModule = require('../parseModule');
 
 function expectAst(unitPath, astPath) {
   const src = fs.readFileSync(unitPath);

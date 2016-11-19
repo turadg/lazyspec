@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const specUnit = require('../../../src/lib/styles/jasmine');
+const specUnit = require('../jasmine');
 
 function expectSpec(moduleName) {
   const descriptionPath = `spec/fixtures/${moduleName}-description.json`;

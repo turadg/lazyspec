@@ -1,9 +1,8 @@
 const fs = require('fs');
 
-const describeModule = require('../../src/lib/describeModule');
+const describeModule = require('../describeModule');
 
 function expectDescription(moduleName) {
-  const unitPath = `spec/fixtures/${moduleName}.js`;
   const astPath = `spec/fixtures/${moduleName}-ast.json`;
   const descriptionPath = `spec/fixtures/${moduleName}-description.json`;
 
