@@ -1,0 +1,135 @@
+exports[`generateSpecFile should describe a stateless function component 1`] = `
+"/* @lazyspec (remove to manage manually) */
+/* @flow */
+/* eslint-disable max-len */
+import StatelessFunction from \'../StatelessFunction.js\';
+
+describe(\'StatelessFunction\', () => {
+  it(\'exists\', () => {
+    expect(StatelessFunction).toBeTruthy();
+  });
+});
+"
+`;
+
+exports[`generateSpecFile should describe an ES5 component 1`] = `
+"/* @lazyspec (remove to manage manually) */
+/* @flow */
+/* eslint-disable max-len */
+import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+import CreateClass from \'../CreateClass.js\';
+
+describe(\'CreateClass\', () => {
+  it(\'exists\', () => {
+    expect(CreateClass).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <CreateClass  />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+"
+`;
+
+exports[`generateSpecFile should describe an ES6 component 1`] = `
+"/* @lazyspec (remove to manage manually) */
+/* @flow */
+/* eslint-disable max-len */
+import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+import DefaultableComponent from \'../DefaultableComponent.js\';
+
+describe(\'DefaultableComponent\', () => {
+  it(\'exists\', () => {
+    expect(DefaultableComponent).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <DefaultableComponent  />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+"
+`;
+
+exports[`generateSpecFile should describe an ES6 with Flow component 1`] = `
+"/* @lazyspec (remove to manage manually) */
+/* @flow */
+/* eslint-disable max-len */
+import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+import FlowComponent from \'../FlowComponent.js\';
+
+describe(\'FlowComponent\', () => {
+  it(\'exists\', () => {
+    expect(FlowComponent).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <FlowComponent label=\"mockstring\" />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+"
+`;
+
+exports[`generateSpecFile should describe multi-exports 1`] = `
+"/* @lazyspec (remove to manage manually) */
+/* @flow */
+/* eslint-disable max-len */
+import MultipleComponents, {Bold} from \'../MultipleComponents.js\';
+
+describe(\'MultipleComponents\', () => {
+  it(\'exists\', () => {
+    expect(MultipleComponents).toBeTruthy();
+  });
+});
+describe(\'Bold\', () => {
+  it(\'exists\', () => {
+    expect(Bold).toBeTruthy();
+  });
+});
+"
+`;
+
+exports[`generateSpecFile should describe simple exports 1`] = `
+"/* @lazyspec (remove to manage manually) */
+/* @flow */
+/* eslint-disable max-len */
+import esExports, {refConst, refFunc, inlineConst, inlineFunc} from \'../esExports.js\';
+
+describe(\'esExports\', () => {
+  it(\'exists\', () => {
+    expect(esExports).toBeTruthy();
+  });
+});
+describe(\'refConst\', () => {
+  it(\'exists\', () => {
+    expect(refConst).toBeTruthy();
+  });
+});
+describe(\'refFunc\', () => {
+  it(\'exists\', () => {
+    expect(refFunc).toBeTruthy();
+  });
+});
+describe(\'inlineConst\', () => {
+  it(\'exists\', () => {
+    expect(inlineConst).toBeTruthy();
+  });
+});
+describe(\'inlineFunc\', () => {
+  it(\'exists\', () => {
+    expect(inlineFunc).toBeTruthy();
+  });
+});
+"
+`;

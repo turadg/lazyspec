@@ -16,9 +16,18 @@ function getBindings(exportsInfo) {
   return bindings;
 }
 
-function importDeclaration({ exportsInfo }, modulePath) {
+function importDeclaration({ exportsInfo, reactInfo }, modulePath) {
   const bindings = getBindings(exportsInfo);
-  return `import ${bindings} from '${modulePath}';`;
+  const unitLine = `import ${bindings} from '${modulePath}';`;
+
+  if (reactInfo && reactInfo.props) {
+    return `import React from 'react';
+import renderer from 'react-test-renderer';
+
+${unitLine}`;
+  }
+
+  return unitLine;
 }
 
 module.exports = importDeclaration;

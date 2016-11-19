@@ -1,0 +1,77 @@
+exports[`describeModule should describe a createClass component 1`] = `
+"describe(\'CreateClass\', () => {
+  it(\'exists\', () => {
+    expect(CreateClass).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <CreateClass  />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});"
+`;
+
+exports[`describeModule should describe a stateless function component 1`] = `
+"describe(\'StatelessFunction\', () => {
+  it(\'exists\', () => {
+    expect(StatelessFunction).toBeTruthy();
+  });
+});"
+`;
+
+exports[`describeModule should describe an ES6 component 1`] = `
+"describe(\'DefaultableComponent\', () => {
+  it(\'exists\', () => {
+    expect(DefaultableComponent).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <DefaultableComponent  />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});"
+`;
+
+exports[`describeModule should describe an ES6 with Flow component 1`] = `
+"describe(\'FlowComponent\', () => {
+  it(\'exists\', () => {
+    expect(FlowComponent).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <FlowComponent label=\"mockstring\" />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});"
+`;
+
+exports[`describeModule should describe simple exports 1`] = `
+"describe(\'esExports\', () => {
+  it(\'exists\', () => {
+    expect(esExports).toBeTruthy();
+  });
+});
+describe(\'refConst\', () => {
+  it(\'exists\', () => {
+    expect(refConst).toBeTruthy();
+  });
+});
+describe(\'refFunc\', () => {
+  it(\'exists\', () => {
+    expect(refFunc).toBeTruthy();
+  });
+});
+describe(\'inlineConst\', () => {
+  it(\'exists\', () => {
+    expect(inlineConst).toBeTruthy();
+  });
+});
+describe(\'inlineFunc\', () => {
+  it(\'exists\', () => {
+    expect(inlineFunc).toBeTruthy();
+  });
+});"
+`;

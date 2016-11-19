@@ -7,9 +7,7 @@ const glob = require('glob');
 const path = require('path');
 const mkdirp = require('mkdirp');
 
-const describeModule = require('./lib/describeModule');
-const importDeclaration = require('./lib/importDeclaration');
-const specUnit = require('./lib/styles/jasmine');
+const generateSpecFile = require('./lib/generateSpecFile');
 
 const { unitToSpec } = require('./lib/layouts/loloTests');
 
@@ -28,7 +26,6 @@ const processUnit = (unitPath, src) => {
   const pathInfo = path.parse(unitPath);
   const specPath = unitToSpec(unitPath);
 
-
   if (fs.existsSync(specPath)) {
     if (lazyManaged(specPath)) {
       console.warn(`Overwriting existing lazy spec ${specPath}`);
@@ -40,25 +37,8 @@ const processUnit = (unitPath, src) => {
 
   // '-' is not valid in a Javascript symbol and the separator isn't important for the spec
   const moduleName = pathInfo.name.replace('-', '');
-  const moduleInfo = describeModule(moduleName, src);
 
-  if (!moduleInfo.exportsInfo.hasExports) {
-    console.warn('No exports in', unitPath);
-    return;
-  }
-
-  const jasmineSpec = specUnit(moduleInfo);
-
-  // why doesn't `relative` work without the slice?
-  const importPath = path.relative(specPath, unitPath).slice(3);
-  const importLine = importDeclaration(moduleInfo, importPath);
-
-  const fileContents = `/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
-${importLine}
-${jasmineSpec}
-`;
+  const fileContents = generateSpecFile(moduleName, specPath, unitPath, src);
 
   mkdirp(path.dirname(specPath));
   fs.writeFile(specPath, fileContents, 'utf8', (err2) => {
