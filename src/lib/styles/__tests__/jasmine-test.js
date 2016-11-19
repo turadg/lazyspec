@@ -1,11 +1,14 @@
 const fs = require('fs');
 
+const describeModule = require('../../describeModule');
+const parseModule = require('../../parseModule');
 const specUnit = require('../jasmine');
 
 function expectSpec(moduleName) {
-  const descriptionPath = `spec/fixtures/${moduleName}-description.json`;
-
-  const description = JSON.parse(fs.readFileSync(descriptionPath));
+  const unitPath = `spec/fixtures/${moduleName}.js`;
+  const src = fs.readFileSync(unitPath);
+  const ast = parseModule(unitPath, src);
+  const description = describeModule(moduleName, ast);
 
   const spec = specUnit(description);
 

@@ -1,8 +1,8 @@
 exports[`describeModule should describe a createClass component 1`] = `
 "
-describe(\'Button\', () => {
+describe(\'CreateClass\', () => {
   it(\'should exist\', () => {
-    expect(Button).toBeTruthy();
+    expect(CreateClass).toBeTruthy();
   });
 });
 "

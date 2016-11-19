@@ -1,4 +1,4 @@
-exports[`describeModule should describe a createClass component 1`] = `
+exports[`describeModule should describe an ES5 component 1`] = `
 Object {
   "description": "",
   "exportsDefault": true,
@@ -51,27 +51,27 @@ Object {
         "value": Array [
           Object {
             "computed": false,
-            "value": "\"primary\"",
+            "value": "\'primary\'",
           },
           Object {
             "computed": false,
-            "value": "\"secondary\"",
+            "value": "\'secondary\'",
           },
           Object {
             "computed": false,
-            "value": "\"tertiary\"",
+            "value": "\'tertiary\'",
           },
           Object {
             "computed": false,
-            "value": "\"quaternary\"",
+            "value": "\'quaternary\'",
           },
           Object {
             "computed": false,
-            "value": "\"text\"",
+            "value": "\'text\'",
           },
           Object {
             "computed": false,
-            "value": "\"icon\"",
+            "value": "\'icon\'",
           },
         ],
       },
