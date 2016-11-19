@@ -1,3 +1,10 @@
+exports[`describeReact should describe a stateless function component 1`] = `
+Object {
+  "description": "",
+  "methods": Array [],
+}
+`;
+
 exports[`describeReact should describe an ES5 component 1`] = `
 Object {
   "description": "",

@@ -1,3 +1,12 @@
+exports[`describeExports should describe a stateless function component 1`] = `
+Object {
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "spec/fixtures/StatelessFunction.js",
+  "namedExportNames": Array [],
+}
+`;
+
 exports[`describeExports should describe an ES5 component 1`] = `
 Object {
   "exportsDefault": true,
@@ -22,6 +31,17 @@ Object {
   "hasExports": true,
   "moduleName": "spec/fixtures/FlowComponent.js",
   "namedExportNames": Array [],
+}
+`;
+
+exports[`describeExports should describe multi-exports 1`] = `
+Object {
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "spec/fixtures/MultipleComponents.js",
+  "namedExportNames": Array [
+    "Bold",
+  ],
 }
 `;
 

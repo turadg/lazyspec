@@ -28,4 +28,15 @@ describe('describeReact', () => {
   it('should describe an ES6 with Flow component', () => {
     expectDescription('FlowComponent');
   });
+
+  it('should describe a stateless function component', () => {
+    expectDescription('StatelessFunction');
+  });
+
+  // Not currently supported by react-docgen
+  it('should not describe multi-exports', () => {
+    expect(
+      () => expectDescription('MultipleComponents')
+    ).toThrowError('Multiple exported component definitions found.');
+  });
 });

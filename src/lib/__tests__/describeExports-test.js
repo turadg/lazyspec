@@ -26,4 +26,12 @@ describe('describeExports', () => {
   it('should describe an ES6 with Flow component', () => {
     expectDescription('FlowComponent');
   });
+
+  it('should describe a stateless function component', () => {
+    expectDescription('StatelessFunction');
+  });
+
+  it('should describe multi-exports', () => {
+    expectDescription('MultipleComponents');
+  });
 });
