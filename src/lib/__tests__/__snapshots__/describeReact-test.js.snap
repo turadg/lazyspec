@@ -168,3 +168,20 @@ Object {
   },
 }
 `;
+
+exports[`describeReact should describe an unsafe ES6 component 1`] = `
+Object {
+  "description": "",
+  "methods": Array [],
+  "props": Object {
+    "foo": Object {
+      "description": "",
+      "required": true,
+      "type": Object {
+        "name": "instanceOf",
+        "value": "React",
+      },
+    },
+  },
+}
+`;

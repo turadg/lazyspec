@@ -22,7 +22,11 @@ describe('describeModule', () => {
   });
 
   it('should describe an ES6 component', () => {
-    expectSpec('DefaultableComponent');
+    expectSpec('SafeComponent');
+  });
+
+  it('should describe an unsafe ES6 component', () => {
+    expectSpec('UnsafeComponent');
   });
 
   it('should describe an ES6 with Flow component', () => {

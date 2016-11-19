@@ -1,6 +1,6 @@
 import React from 'react';
 
-class DefaultableComponent extends React.Component {
+class SafeComponent extends React.Component {
   static propTypes = {
     level: React.PropTypes.oneOf([
       'primary', 'secondary', 'tertiary', 'quaternary', 'text', 'icon',
@@ -19,4 +19,4 @@ class DefaultableComponent extends React.Component {
   }
 }
 
-export default DefaultableComponent;
+export default SafeComponent;

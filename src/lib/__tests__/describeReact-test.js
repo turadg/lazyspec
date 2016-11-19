@@ -22,7 +22,11 @@ describe('describeReact', () => {
   });
 
   it('should describe an ES6 component', () => {
-    expectDescription('DefaultableComponent');
+    expectDescription('SafeComponent');
+  });
+
+  it('should describe an unsafe ES6 component', () => {
+    expectDescription('UnsafeComponent');
   });
 
   it('should describe an ES6 with Flow component', () => {

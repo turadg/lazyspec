@@ -1,39 +1,3 @@
-exports[`describeExports should describe a stateless function component 1`] = `
-Object {
-  "exportsDefault": true,
-  "hasExports": true,
-  "moduleName": "spec/fixtures/StatelessFunction.js",
-  "namedExportNames": Array [],
-}
-`;
-
-exports[`describeExports should describe an ES5 component 1`] = `
-Object {
-  "exportsDefault": true,
-  "hasExports": true,
-  "moduleName": "spec/fixtures/CreateClass.js",
-  "namedExportNames": Array [],
-}
-`;
-
-exports[`describeExports should describe an ES6 component 1`] = `
-Object {
-  "exportsDefault": true,
-  "hasExports": true,
-  "moduleName": "spec/fixtures/DefaultableComponent.js",
-  "namedExportNames": Array [],
-}
-`;
-
-exports[`describeExports should describe an ES6 with Flow component 1`] = `
-Object {
-  "exportsDefault": true,
-  "hasExports": true,
-  "moduleName": "spec/fixtures/FlowComponent.js",
-  "namedExportNames": Array [],
-}
-`;
-
 exports[`describeExports should describe multi-exports 1`] = `
 Object {
   "exportsDefault": true,

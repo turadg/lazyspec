@@ -36,13 +36,13 @@ exports[`describeModule should describe an ES6 component 1`] = `
 "import React from \'react\';
 import renderer from \'react-test-renderer\';
 
-describe(\'DefaultableComponent\', () => {
+describe(\'SafeComponent\', () => {
   it(\'exists\', () => {
-    expect(DefaultableComponent).toBeTruthy();
+    expect(SafeComponent).toBeTruthy();
   });
 
   it(\'renders\', () => {
-    const comp = <DefaultableComponent  />;
+    const comp = <SafeComponent  />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -60,6 +60,23 @@ describe(\'FlowComponent\', () => {
 
   it(\'renders\', () => {
     const comp = <FlowComponent label=\"mockstring\" />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});"
+`;
+
+exports[`describeModule should describe an unsafe ES6 component 1`] = `
+"import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+describe(\'UnsafeComponent\', () => {
+  it(\'exists\', () => {
+    expect(UnsafeComponent).toBeTruthy();
+  });
+
+  xit(\'renders\', () => {
+    const comp = <UnsafeComponent foo=\"TODO mock\" />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();
   });

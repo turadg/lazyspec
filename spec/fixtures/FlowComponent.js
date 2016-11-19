@@ -5,7 +5,7 @@ type Props = {
   label: string,
 };
 
-class DefaultableComponent extends React.Component {
+class SafeComponent extends React.Component {
   props: Props;
 
   static defaltProps = {
@@ -21,4 +21,4 @@ class DefaultableComponent extends React.Component {
   }
 }
 
-export default DefaultableComponent;
+export default SafeComponent;
