@@ -1,9 +1,5 @@
 import React from 'react';
 
-const Text = ({text}) => {
-  return <span>{text}</span>;
-}
-
 const Button = React.createClass({
   propTypes: {
     level: React.PropTypes.oneOf([
@@ -23,7 +19,7 @@ const Button = React.createClass({
   render() {
     return (
       <button disabled={this.props.disabled}>
-        <Text>{this.props.label}</Text>
+        <b>{this.props.label}</b>
       </button>
     );
   },

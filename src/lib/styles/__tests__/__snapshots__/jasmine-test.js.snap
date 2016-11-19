@@ -1,4 +1,4 @@
-exports[`describeModule should describe a simple component 1`] = `
+exports[`describeModule should describe a createClass component 1`] = `
 "
 describe(\'Button\', () => {
   it(\'should exist\', () => {

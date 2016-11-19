@@ -17,7 +17,7 @@ describe('describeModule', () => {
     expectDescription('esExports');
   });
 
-  it('should describe a simple component', () => {
-    expectDescription('Button');
+  it('should describe a createClass component', () => {
+    expectDescription('CreateClass');
   });
 });

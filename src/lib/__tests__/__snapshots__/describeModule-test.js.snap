@@ -1,4 +1,4 @@
-exports[`describeModule should describe a simple component 1`] = `
+exports[`describeModule should describe a createClass component 1`] = `
 Object {
   "description": "",
   "exportsDefault": true,
@@ -19,7 +19,7 @@ Object {
       "returns": null,
     },
   ],
-  "moduleName": "Button",
+  "moduleName": "CreateClass",
   "namedExportNames": Array [],
   "props": Object {
     "disabled": Object {

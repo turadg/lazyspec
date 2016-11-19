@@ -14,7 +14,7 @@ describe('parseModule', () => {
     expectAst('spec/fixtures/esExports.js');
   });
 
-  it('should parse a simple React component', () => {
-    expectAst('spec/fixtures/Button.js');
+  it('should parse a createClass component', () => {
+    expectAst('spec/fixtures/CreateClass.js');
   });
 });

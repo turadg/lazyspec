@@ -1,10 +1,10 @@
-exports[`parseModule should parse a simple React component 1`] = `
+exports[`parseModule should parse a createClass component 1`] = `
 Object {
   "comments": null,
   "loc": Object {
     "end": Object {
       "column": 0,
-      "line": 33,
+      "line": 29,
     },
     "indent": 0,
     "lines": Lines {},
@@ -86,284 +86,14 @@ Object {
             "id": Identifier {
               "loc": Object {
                 "end": Object {
-                  "column": 10,
-                  "line": 3,
-                },
-                "indent": 0,
-                "lines": Lines {},
-                "start": Object {
-                  "column": 6,
-                  "line": 3,
-                },
-              },
-              "name": "Text",
-              "type": "Identifier",
-            },
-            "init": ArrowFunctionExpression {
-              "body": BlockStatement {
-                "body": Array [
-                  ReturnStatement {
-                    "argument": JSXElement {
-                      "children": Array [
-                        JSXExpressionContainer {
-                          "expression": Identifier {
-                            "loc": Object {
-                              "end": Object {
-                                "column": 20,
-                                "line": 4,
-                              },
-                              "indent": 2,
-                              "lines": Lines {},
-                              "start": Object {
-                                "column": 16,
-                                "line": 4,
-                              },
-                            },
-                            "name": "text",
-                            "type": "Identifier",
-                          },
-                          "loc": Object {
-                            "end": Object {
-                              "column": 21,
-                              "line": 4,
-                            },
-                            "indent": 2,
-                            "lines": Lines {},
-                            "start": Object {
-                              "column": 15,
-                              "line": 4,
-                            },
-                          },
-                          "type": "JSXExpressionContainer",
-                        },
-                      ],
-                      "closingElement": JSXClosingElement {
-                        "loc": Object {
-                          "end": Object {
-                            "column": 28,
-                            "line": 4,
-                          },
-                          "indent": 2,
-                          "lines": Lines {},
-                          "start": Object {
-                            "column": 21,
-                            "line": 4,
-                          },
-                        },
-                        "name": JSXIdentifier {
-                          "loc": Object {
-                            "end": Object {
-                              "column": 27,
-                              "line": 4,
-                            },
-                            "indent": 2,
-                            "lines": Lines {},
-                            "start": Object {
-                              "column": 23,
-                              "line": 4,
-                            },
-                          },
-                          "name": "span",
-                          "type": "JSXIdentifier",
-                        },
-                        "type": "JSXClosingElement",
-                      },
-                      "loc": Object {
-                        "end": Object {
-                          "column": 28,
-                          "line": 4,
-                        },
-                        "indent": 2,
-                        "lines": Lines {},
-                        "start": Object {
-                          "column": 9,
-                          "line": 4,
-                        },
-                      },
-                      "openingElement": JSXOpeningElement {
-                        "attributes": Array [],
-                        "loc": Object {
-                          "end": Object {
-                            "column": 15,
-                            "line": 4,
-                          },
-                          "indent": 2,
-                          "lines": Lines {},
-                          "start": Object {
-                            "column": 9,
-                            "line": 4,
-                          },
-                        },
-                        "name": JSXIdentifier {
-                          "loc": Object {
-                            "end": Object {
-                              "column": 14,
-                              "line": 4,
-                            },
-                            "indent": 2,
-                            "lines": Lines {},
-                            "start": Object {
-                              "column": 10,
-                              "line": 4,
-                            },
-                          },
-                          "name": "span",
-                          "type": "JSXIdentifier",
-                        },
-                        "selfClosing": false,
-                        "type": "JSXOpeningElement",
-                      },
-                      "type": "JSXElement",
-                    },
-                    "loc": Object {
-                      "end": Object {
-                        "column": 29,
-                        "line": 4,
-                      },
-                      "indent": 2,
-                      "lines": Lines {},
-                      "start": Object {
-                        "column": 2,
-                        "line": 4,
-                      },
-                    },
-                    "type": "ReturnStatement",
-                  },
-                ],
-                "loc": Object {
-                  "end": Object {
-                    "column": 1,
-                    "line": 5,
-                  },
-                  "indent": 0,
-                  "lines": Lines {},
-                  "start": Object {
-                    "column": 25,
-                    "line": 3,
-                  },
-                },
-                "type": "BlockStatement",
-              },
-              "expression": false,
-              "generator": false,
-              "id": null,
-              "loc": Object {
-                "end": Object {
-                  "column": 1,
-                  "line": 5,
-                },
-                "indent": 0,
-                "lines": Lines {},
-                "start": Object {
-                  "column": 13,
-                  "line": 3,
-                },
-              },
-              "params": Array [
-                ObjectExpression {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 20,
-                      "line": 3,
-                    },
-                    "indent": 0,
-                    "lines": Lines {},
-                    "start": Object {
-                      "column": 14,
-                      "line": 3,
-                    },
-                  },
-                  "properties": Array [
-                    Property {
-                      "computed": false,
-                      "key": Identifier {
-                        "loc": Object {
-                          "end": Object {
-                            "column": 19,
-                            "line": 3,
-                          },
-                          "indent": 0,
-                          "lines": Lines {},
-                          "start": Object {
-                            "column": 15,
-                            "line": 3,
-                          },
-                        },
-                        "name": "text",
-                        "type": "Identifier",
-                      },
-                      "kind": "init",
-                      "loc": Object {
-                        "end": Object {
-                          "column": 19,
-                          "line": 3,
-                        },
-                        "indent": 0,
-                        "lines": Lines {},
-                        "start": Object {
-                          "column": 15,
-                          "line": 3,
-                        },
-                      },
-                      "method": false,
-                      "shorthand": true,
-                      "type": "Property",
-                      "value": Identifier {
-                        "loc": null,
-                        "name": "text",
-                        "type": "Identifier",
-                      },
-                    },
-                  ],
-                  "type": "ObjectPattern",
-                },
-              ],
-              "type": "ArrowFunctionExpression",
-            },
-            "loc": Object {
-              "end": Object {
-                "column": 1,
-                "line": 5,
-              },
-              "indent": 0,
-              "lines": Lines {},
-              "start": Object {
-                "column": 6,
-                "line": 3,
-              },
-            },
-            "type": "VariableDeclarator",
-          },
-        ],
-        "kind": "const",
-        "loc": Object {
-          "end": Object {
-            "column": 1,
-            "line": 5,
-          },
-          "indent": 0,
-          "lines": Lines {},
-          "start": Object {
-            "column": 0,
-            "line": 3,
-          },
-        },
-        "type": "VariableDeclaration",
-      },
-      VariableDeclaration {
-        "declarations": Array [
-          VariableDeclarator {
-            "id": Identifier {
-              "loc": Object {
-                "end": Object {
                   "column": 12,
-                  "line": 7,
+                  "line": 3,
                 },
                 "indent": 0,
                 "lines": Lines {},
                 "start": Object {
                   "column": 6,
-                  "line": 7,
+                  "line": 3,
                 },
               },
               "name": "Button",
@@ -375,13 +105,13 @@ Object {
                   "loc": Object {
                     "end": Object {
                       "column": 1,
-                      "line": 30,
+                      "line": 26,
                     },
                     "indent": 0,
                     "lines": Lines {},
                     "start": Object {
                       "column": 33,
-                      "line": 7,
+                      "line": 3,
                     },
                   },
                   "properties": Array [
@@ -391,13 +121,13 @@ Object {
                         "loc": Object {
                           "end": Object {
                             "column": 11,
-                            "line": 8,
+                            "line": 4,
                           },
                           "indent": 2,
                           "lines": Lines {},
                           "start": Object {
                             "column": 2,
-                            "line": 8,
+                            "line": 4,
                           },
                         },
                         "name": "propTypes",
@@ -407,13 +137,13 @@ Object {
                       "loc": Object {
                         "end": Object {
                           "column": 3,
-                          "line": 15,
+                          "line": 11,
                         },
                         "indent": 2,
                         "lines": Lines {},
                         "start": Object {
                           "column": 2,
-                          "line": 8,
+                          "line": 4,
                         },
                       },
                       "method": false,
@@ -423,13 +153,13 @@ Object {
                         "loc": Object {
                           "end": Object {
                             "column": 3,
-                            "line": 15,
+                            "line": 11,
                           },
                           "indent": 2,
                           "lines": Lines {},
                           "start": Object {
                             "column": 13,
-                            "line": 8,
+                            "line": 4,
                           },
                         },
                         "properties": Array [
@@ -439,13 +169,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 9,
-                                  "line": 9,
+                                  "line": 5,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 4,
-                                  "line": 9,
+                                  "line": 5,
                                 },
                               },
                               "name": "level",
@@ -455,13 +185,13 @@ Object {
                             "loc": Object {
                               "end": Object {
                                 "column": 6,
-                                "line": 11,
+                                "line": 7,
                               },
                               "indent": 4,
                               "lines": Lines {},
                               "start": Object {
                                 "column": 4,
-                                "line": 9,
+                                "line": 5,
                               },
                             },
                             "method": false,
@@ -475,13 +205,13 @@ Object {
                                       "loc": Object {
                                         "end": Object {
                                           "column": 15,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                         "indent": 6,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 6,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                       },
                                       "raw": "\'primary\'",
@@ -492,13 +222,13 @@ Object {
                                       "loc": Object {
                                         "end": Object {
                                           "column": 28,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                         "indent": 4,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 17,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                       },
                                       "raw": "\'secondary\'",
@@ -509,13 +239,13 @@ Object {
                                       "loc": Object {
                                         "end": Object {
                                           "column": 40,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                         "indent": 4,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 30,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                       },
                                       "raw": "\'tertiary\'",
@@ -526,13 +256,13 @@ Object {
                                       "loc": Object {
                                         "end": Object {
                                           "column": 54,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                         "indent": 4,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 42,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                       },
                                       "raw": "\'quaternary\'",
@@ -543,13 +273,13 @@ Object {
                                       "loc": Object {
                                         "end": Object {
                                           "column": 62,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                         "indent": 4,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 56,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                       },
                                       "raw": "\'text\'",
@@ -560,13 +290,13 @@ Object {
                                       "loc": Object {
                                         "end": Object {
                                           "column": 70,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                         "indent": 4,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 64,
-                                          "line": 10,
+                                          "line": 6,
                                         },
                                       },
                                       "raw": "\'icon\'",
@@ -577,13 +307,13 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 5,
-                                      "line": 11,
+                                      "line": 7,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 33,
-                                      "line": 9,
+                                      "line": 5,
                                     },
                                   },
                                   "type": "ArrayExpression",
@@ -594,13 +324,13 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 32,
-                                    "line": 9,
+                                    "line": 5,
                                   },
                                   "indent": 4,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 11,
-                                    "line": 9,
+                                    "line": 5,
                                   },
                                 },
                                 "object": StaticMemberExpression {
@@ -608,26 +338,26 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 26,
-                                      "line": 9,
+                                      "line": 5,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 11,
-                                      "line": 9,
+                                      "line": 5,
                                     },
                                   },
                                   "object": Identifier {
                                     "loc": Object {
                                       "end": Object {
                                         "column": 16,
-                                        "line": 9,
+                                        "line": 5,
                                       },
                                       "indent": 4,
                                       "lines": Lines {},
                                       "start": Object {
                                         "column": 11,
-                                        "line": 9,
+                                        "line": 5,
                                       },
                                     },
                                     "name": "React",
@@ -637,13 +367,13 @@ Object {
                                     "loc": Object {
                                       "end": Object {
                                         "column": 26,
-                                        "line": 9,
+                                        "line": 5,
                                       },
                                       "indent": 4,
                                       "lines": Lines {},
                                       "start": Object {
                                         "column": 17,
-                                        "line": 9,
+                                        "line": 5,
                                       },
                                     },
                                     "name": "PropTypes",
@@ -655,13 +385,13 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 32,
-                                      "line": 9,
+                                      "line": 5,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 27,
-                                      "line": 9,
+                                      "line": 5,
                                     },
                                   },
                                   "name": "oneOf",
@@ -672,13 +402,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 6,
-                                  "line": 11,
+                                  "line": 7,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 11,
-                                  "line": 9,
+                                  "line": 5,
                                 },
                               },
                               "type": "CallExpression",
@@ -690,13 +420,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 12,
-                                  "line": 12,
+                                  "line": 8,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 4,
-                                  "line": 12,
+                                  "line": 8,
                                 },
                               },
                               "name": "disabled",
@@ -706,13 +436,13 @@ Object {
                             "loc": Object {
                               "end": Object {
                                 "column": 34,
-                                "line": 12,
+                                "line": 8,
                               },
                               "indent": 4,
                               "lines": Lines {},
                               "start": Object {
                                 "column": 4,
-                                "line": 12,
+                                "line": 8,
                               },
                             },
                             "method": false,
@@ -723,13 +453,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 34,
-                                  "line": 12,
+                                  "line": 8,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 14,
-                                  "line": 12,
+                                  "line": 8,
                                 },
                               },
                               "object": StaticMemberExpression {
@@ -737,26 +467,26 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 29,
-                                    "line": 12,
+                                    "line": 8,
                                   },
                                   "indent": 4,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 14,
-                                    "line": 12,
+                                    "line": 8,
                                   },
                                 },
                                 "object": Identifier {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 19,
-                                      "line": 12,
+                                      "line": 8,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 14,
-                                      "line": 12,
+                                      "line": 8,
                                     },
                                   },
                                   "name": "React",
@@ -766,13 +496,13 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 29,
-                                      "line": 12,
+                                      "line": 8,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 20,
-                                      "line": 12,
+                                      "line": 8,
                                     },
                                   },
                                   "name": "PropTypes",
@@ -784,13 +514,13 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 34,
-                                    "line": 12,
+                                    "line": 8,
                                   },
                                   "indent": 4,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 30,
-                                    "line": 12,
+                                    "line": 8,
                                   },
                                 },
                                 "name": "bool",
@@ -805,13 +535,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 9,
-                                  "line": 13,
+                                  "line": 9,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 4,
-                                  "line": 13,
+                                  "line": 9,
                                 },
                               },
                               "name": "label",
@@ -821,13 +551,13 @@ Object {
                             "loc": Object {
                               "end": Object {
                                 "column": 33,
-                                "line": 13,
+                                "line": 9,
                               },
                               "indent": 4,
                               "lines": Lines {},
                               "start": Object {
                                 "column": 4,
-                                "line": 13,
+                                "line": 9,
                               },
                             },
                             "method": false,
@@ -838,13 +568,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 33,
-                                  "line": 13,
+                                  "line": 9,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 11,
-                                  "line": 13,
+                                  "line": 9,
                                 },
                               },
                               "object": StaticMemberExpression {
@@ -852,26 +582,26 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 26,
-                                    "line": 13,
+                                    "line": 9,
                                   },
                                   "indent": 4,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 11,
-                                    "line": 13,
+                                    "line": 9,
                                   },
                                 },
                                 "object": Identifier {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 16,
-                                      "line": 13,
+                                      "line": 9,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 11,
-                                      "line": 13,
+                                      "line": 9,
                                     },
                                   },
                                   "name": "React",
@@ -881,13 +611,13 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 26,
-                                      "line": 13,
+                                      "line": 9,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 17,
-                                      "line": 13,
+                                      "line": 9,
                                     },
                                   },
                                   "name": "PropTypes",
@@ -899,13 +629,13 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 33,
-                                    "line": 13,
+                                    "line": 9,
                                   },
                                   "indent": 4,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 27,
-                                    "line": 13,
+                                    "line": 9,
                                   },
                                 },
                                 "name": "string",
@@ -920,13 +650,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 10,
-                                  "line": 14,
+                                  "line": 10,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 4,
-                                  "line": 14,
+                                  "line": 10,
                                 },
                               },
                               "name": "height",
@@ -936,13 +666,13 @@ Object {
                             "loc": Object {
                               "end": Object {
                                 "column": 34,
-                                "line": 14,
+                                "line": 10,
                               },
                               "indent": 4,
                               "lines": Lines {},
                               "start": Object {
                                 "column": 4,
-                                "line": 14,
+                                "line": 10,
                               },
                             },
                             "method": false,
@@ -953,13 +683,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 34,
-                                  "line": 14,
+                                  "line": 10,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 12,
-                                  "line": 14,
+                                  "line": 10,
                                 },
                               },
                               "object": StaticMemberExpression {
@@ -967,26 +697,26 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 27,
-                                    "line": 14,
+                                    "line": 10,
                                   },
                                   "indent": 4,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 12,
-                                    "line": 14,
+                                    "line": 10,
                                   },
                                 },
                                 "object": Identifier {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 17,
-                                      "line": 14,
+                                      "line": 10,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 12,
-                                      "line": 14,
+                                      "line": 10,
                                     },
                                   },
                                   "name": "React",
@@ -996,13 +726,13 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 27,
-                                      "line": 14,
+                                      "line": 10,
                                     },
                                     "indent": 4,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 18,
-                                      "line": 14,
+                                      "line": 10,
                                     },
                                   },
                                   "name": "PropTypes",
@@ -1014,13 +744,13 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 34,
-                                    "line": 14,
+                                    "line": 10,
                                   },
                                   "indent": 4,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 28,
-                                    "line": 14,
+                                    "line": 10,
                                   },
                                 },
                                 "name": "number",
@@ -1039,13 +769,13 @@ Object {
                         "loc": Object {
                           "end": Object {
                             "column": 8,
-                            "line": 17,
+                            "line": 13,
                           },
                           "indent": 2,
                           "lines": Lines {},
                           "start": Object {
                             "column": 2,
-                            "line": 17,
+                            "line": 13,
                           },
                         },
                         "name": "_setup",
@@ -1055,13 +785,13 @@ Object {
                       "loc": Object {
                         "end": Object {
                           "column": 3,
-                          "line": 18,
+                          "line": 14,
                         },
                         "indent": 2,
                         "lines": Lines {},
                         "start": Object {
                           "column": 2,
-                          "line": 17,
+                          "line": 13,
                         },
                       },
                       "method": true,
@@ -1073,13 +803,13 @@ Object {
                           "loc": Object {
                             "end": Object {
                               "column": 3,
-                              "line": 18,
+                              "line": 14,
                             },
                             "indent": 2,
                             "lines": Lines {},
                             "start": Object {
                               "column": 11,
-                              "line": 17,
+                              "line": 13,
                             },
                           },
                           "type": "BlockStatement",
@@ -1098,13 +828,13 @@ Object {
                         "loc": Object {
                           "end": Object {
                             "column": 6,
-                            "line": 20,
+                            "line": 16,
                           },
                           "indent": 2,
                           "lines": Lines {},
                           "start": Object {
                             "column": 2,
-                            "line": 20,
+                            "line": 16,
                           },
                         },
                         "name": "show",
@@ -1114,13 +844,13 @@ Object {
                       "loc": Object {
                         "end": Object {
                           "column": 3,
-                          "line": 21,
+                          "line": 17,
                         },
                         "indent": 2,
                         "lines": Lines {},
                         "start": Object {
                           "column": 2,
-                          "line": 20,
+                          "line": 16,
                         },
                       },
                       "method": true,
@@ -1132,13 +862,13 @@ Object {
                           "loc": Object {
                             "end": Object {
                               "column": 3,
-                              "line": 21,
+                              "line": 17,
                             },
                             "indent": 2,
                             "lines": Lines {},
                             "start": Object {
                               "column": 9,
-                              "line": 20,
+                              "line": 16,
                             },
                           },
                           "type": "BlockStatement",
@@ -1157,13 +887,13 @@ Object {
                         "loc": Object {
                           "end": Object {
                             "column": 8,
-                            "line": 23,
+                            "line": 19,
                           },
                           "indent": 2,
                           "lines": Lines {},
                           "start": Object {
                             "column": 2,
-                            "line": 23,
+                            "line": 19,
                           },
                         },
                         "name": "render",
@@ -1173,13 +903,13 @@ Object {
                       "loc": Object {
                         "end": Object {
                           "column": 3,
-                          "line": 29,
+                          "line": 25,
                         },
                         "indent": 2,
                         "lines": Lines {},
                         "start": Object {
                           "column": 2,
-                          "line": 23,
+                          "line": 19,
                         },
                       },
                       "method": true,
@@ -1195,13 +925,13 @@ Object {
                                     "loc": Object {
                                       "end": Object {
                                         "column": 8,
-                                        "line": 26,
+                                        "line": 22,
                                       },
                                       "indent": 6,
                                       "lines": Lines {},
                                       "start": Object {
                                         "column": 45,
-                                        "line": 25,
+                                        "line": 21,
                                       },
                                     },
                                     "raw": "
@@ -1217,41 +947,41 @@ Object {
                                           "computed": false,
                                           "loc": Object {
                                             "end": Object {
-                                              "column": 31,
-                                              "line": 26,
+                                              "column": 28,
+                                              "line": 22,
                                             },
                                             "indent": 8,
                                             "lines": Lines {},
                                             "start": Object {
-                                              "column": 15,
-                                              "line": 26,
+                                              "column": 12,
+                                              "line": 22,
                                             },
                                           },
                                           "object": StaticMemberExpression {
                                             "computed": false,
                                             "loc": Object {
                                               "end": Object {
-                                                "column": 25,
-                                                "line": 26,
+                                                "column": 22,
+                                                "line": 22,
                                               },
                                               "indent": 8,
                                               "lines": Lines {},
                                               "start": Object {
-                                                "column": 15,
-                                                "line": 26,
+                                                "column": 12,
+                                                "line": 22,
                                               },
                                             },
                                             "object": ThisExpression {
                                               "loc": Object {
                                                 "end": Object {
-                                                  "column": 19,
-                                                  "line": 26,
+                                                  "column": 16,
+                                                  "line": 22,
                                                 },
                                                 "indent": 8,
                                                 "lines": Lines {},
                                                 "start": Object {
-                                                  "column": 15,
-                                                  "line": 26,
+                                                  "column": 12,
+                                                  "line": 22,
                                                 },
                                               },
                                               "type": "ThisExpression",
@@ -1259,14 +989,14 @@ Object {
                                             "property": Identifier {
                                               "loc": Object {
                                                 "end": Object {
-                                                  "column": 25,
-                                                  "line": 26,
+                                                  "column": 22,
+                                                  "line": 22,
                                                 },
                                                 "indent": 8,
                                                 "lines": Lines {},
                                                 "start": Object {
-                                                  "column": 20,
-                                                  "line": 26,
+                                                  "column": 17,
+                                                  "line": 22,
                                                 },
                                               },
                                               "name": "props",
@@ -1277,14 +1007,14 @@ Object {
                                           "property": Identifier {
                                             "loc": Object {
                                               "end": Object {
-                                                "column": 31,
-                                                "line": 26,
+                                                "column": 28,
+                                                "line": 22,
                                               },
                                               "indent": 8,
                                               "lines": Lines {},
                                               "start": Object {
-                                                "column": 26,
-                                                "line": 26,
+                                                "column": 23,
+                                                "line": 22,
                                               },
                                             },
                                             "name": "label",
@@ -1294,14 +1024,14 @@ Object {
                                         },
                                         "loc": Object {
                                           "end": Object {
-                                            "column": 32,
-                                            "line": 26,
+                                            "column": 29,
+                                            "line": 22,
                                           },
                                           "indent": 8,
                                           "lines": Lines {},
                                           "start": Object {
-                                            "column": 14,
-                                            "line": 26,
+                                            "column": 11,
+                                            "line": 22,
                                           },
                                         },
                                         "type": "JSXExpressionContainer",
@@ -1310,74 +1040,74 @@ Object {
                                     "closingElement": JSXClosingElement {
                                       "loc": Object {
                                         "end": Object {
-                                          "column": 39,
-                                          "line": 26,
+                                          "column": 33,
+                                          "line": 22,
                                         },
                                         "indent": 8,
                                         "lines": Lines {},
                                         "start": Object {
-                                          "column": 32,
-                                          "line": 26,
+                                          "column": 29,
+                                          "line": 22,
                                         },
                                       },
                                       "name": JSXIdentifier {
                                         "loc": Object {
                                           "end": Object {
-                                            "column": 38,
-                                            "line": 26,
+                                            "column": 32,
+                                            "line": 22,
                                           },
                                           "indent": 8,
                                           "lines": Lines {},
                                           "start": Object {
-                                            "column": 34,
-                                            "line": 26,
+                                            "column": 31,
+                                            "line": 22,
                                           },
                                         },
-                                        "name": "Text",
+                                        "name": "b",
                                         "type": "JSXIdentifier",
                                       },
                                       "type": "JSXClosingElement",
                                     },
                                     "loc": Object {
                                       "end": Object {
-                                        "column": 39,
-                                        "line": 26,
+                                        "column": 33,
+                                        "line": 22,
                                       },
                                       "indent": 8,
                                       "lines": Lines {},
                                       "start": Object {
                                         "column": 8,
-                                        "line": 26,
+                                        "line": 22,
                                       },
                                     },
                                     "openingElement": JSXOpeningElement {
                                       "attributes": Array [],
                                       "loc": Object {
                                         "end": Object {
-                                          "column": 14,
-                                          "line": 26,
+                                          "column": 11,
+                                          "line": 22,
                                         },
                                         "indent": 8,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 8,
-                                          "line": 26,
+                                          "line": 22,
                                         },
                                       },
                                       "name": JSXIdentifier {
                                         "loc": Object {
                                           "end": Object {
-                                            "column": 13,
-                                            "line": 26,
+                                            "column": 10,
+                                            "line": 22,
                                           },
                                           "indent": 8,
                                           "lines": Lines {},
                                           "start": Object {
                                             "column": 9,
-                                            "line": 26,
+                                            "line": 22,
                                           },
                                         },
-                                        "name": "Text",
+                                        "name": "b",
                                         "type": "JSXIdentifier",
                                       },
                                       "selfClosing": false,
@@ -1389,13 +1119,13 @@ Object {
                                     "loc": Object {
                                       "end": Object {
                                         "column": 6,
-                                        "line": 27,
+                                        "line": 23,
                                       },
                                       "indent": 6,
                                       "lines": Lines {},
                                       "start": Object {
-                                        "column": 39,
-                                        "line": 26,
+                                        "column": 33,
+                                        "line": 22,
                                       },
                                     },
                                     "raw": "
@@ -1409,26 +1139,26 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 15,
-                                      "line": 27,
+                                      "line": 23,
                                     },
                                     "indent": 6,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 6,
-                                      "line": 27,
+                                      "line": 23,
                                     },
                                   },
                                   "name": JSXIdentifier {
                                     "loc": Object {
                                       "end": Object {
                                         "column": 14,
-                                        "line": 27,
+                                        "line": 23,
                                       },
                                       "indent": 6,
                                       "lines": Lines {},
                                       "start": Object {
                                         "column": 8,
-                                        "line": 27,
+                                        "line": 23,
                                       },
                                     },
                                     "name": "button",
@@ -1439,13 +1169,13 @@ Object {
                                 "loc": Object {
                                   "end": Object {
                                     "column": 15,
-                                    "line": 27,
+                                    "line": 23,
                                   },
                                   "indent": 6,
                                   "lines": Lines {},
                                   "start": Object {
                                     "column": 6,
-                                    "line": 25,
+                                    "line": 21,
                                   },
                                 },
                                 "openingElement": JSXOpeningElement {
@@ -1454,26 +1184,26 @@ Object {
                                       "loc": Object {
                                         "end": Object {
                                           "column": 44,
-                                          "line": 25,
+                                          "line": 21,
                                         },
                                         "indent": 6,
                                         "lines": Lines {},
                                         "start": Object {
                                           "column": 14,
-                                          "line": 25,
+                                          "line": 21,
                                         },
                                       },
                                       "name": JSXIdentifier {
                                         "loc": Object {
                                           "end": Object {
                                             "column": 22,
-                                            "line": 25,
+                                            "line": 21,
                                           },
                                           "indent": 6,
                                           "lines": Lines {},
                                           "start": Object {
                                             "column": 14,
-                                            "line": 25,
+                                            "line": 21,
                                           },
                                         },
                                         "name": "disabled",
@@ -1486,13 +1216,13 @@ Object {
                                           "loc": Object {
                                             "end": Object {
                                               "column": 43,
-                                              "line": 25,
+                                              "line": 21,
                                             },
                                             "indent": 6,
                                             "lines": Lines {},
                                             "start": Object {
                                               "column": 24,
-                                              "line": 25,
+                                              "line": 21,
                                             },
                                           },
                                           "object": StaticMemberExpression {
@@ -1500,26 +1230,26 @@ Object {
                                             "loc": Object {
                                               "end": Object {
                                                 "column": 34,
-                                                "line": 25,
+                                                "line": 21,
                                               },
                                               "indent": 6,
                                               "lines": Lines {},
                                               "start": Object {
                                                 "column": 24,
-                                                "line": 25,
+                                                "line": 21,
                                               },
                                             },
                                             "object": ThisExpression {
                                               "loc": Object {
                                                 "end": Object {
                                                   "column": 28,
-                                                  "line": 25,
+                                                  "line": 21,
                                                 },
                                                 "indent": 6,
                                                 "lines": Lines {},
                                                 "start": Object {
                                                   "column": 24,
-                                                  "line": 25,
+                                                  "line": 21,
                                                 },
                                               },
                                               "type": "ThisExpression",
@@ -1528,13 +1258,13 @@ Object {
                                               "loc": Object {
                                                 "end": Object {
                                                   "column": 34,
-                                                  "line": 25,
+                                                  "line": 21,
                                                 },
                                                 "indent": 6,
                                                 "lines": Lines {},
                                                 "start": Object {
                                                   "column": 29,
-                                                  "line": 25,
+                                                  "line": 21,
                                                 },
                                               },
                                               "name": "props",
@@ -1546,13 +1276,13 @@ Object {
                                             "loc": Object {
                                               "end": Object {
                                                 "column": 43,
-                                                "line": 25,
+                                                "line": 21,
                                               },
                                               "indent": 6,
                                               "lines": Lines {},
                                               "start": Object {
                                                 "column": 35,
-                                                "line": 25,
+                                                "line": 21,
                                               },
                                             },
                                             "name": "disabled",
@@ -1563,13 +1293,13 @@ Object {
                                         "loc": Object {
                                           "end": Object {
                                             "column": 44,
-                                            "line": 25,
+                                            "line": 21,
                                           },
                                           "indent": 6,
                                           "lines": Lines {},
                                           "start": Object {
                                             "column": 23,
-                                            "line": 25,
+                                            "line": 21,
                                           },
                                         },
                                         "type": "JSXExpressionContainer",
@@ -1579,26 +1309,26 @@ Object {
                                   "loc": Object {
                                     "end": Object {
                                       "column": 45,
-                                      "line": 25,
+                                      "line": 21,
                                     },
                                     "indent": 6,
                                     "lines": Lines {},
                                     "start": Object {
                                       "column": 6,
-                                      "line": 25,
+                                      "line": 21,
                                     },
                                   },
                                   "name": JSXIdentifier {
                                     "loc": Object {
                                       "end": Object {
                                         "column": 13,
-                                        "line": 25,
+                                        "line": 21,
                                       },
                                       "indent": 6,
                                       "lines": Lines {},
                                       "start": Object {
                                         "column": 7,
-                                        "line": 25,
+                                        "line": 21,
                                       },
                                     },
                                     "name": "button",
@@ -1612,13 +1342,13 @@ Object {
                               "loc": Object {
                                 "end": Object {
                                   "column": 6,
-                                  "line": 28,
+                                  "line": 24,
                                 },
                                 "indent": 4,
                                 "lines": Lines {},
                                 "start": Object {
                                   "column": 4,
-                                  "line": 24,
+                                  "line": 20,
                                 },
                               },
                               "type": "ReturnStatement",
@@ -1627,13 +1357,13 @@ Object {
                           "loc": Object {
                             "end": Object {
                               "column": 3,
-                              "line": 29,
+                              "line": 25,
                             },
                             "indent": 2,
                             "lines": Lines {},
                             "start": Object {
                               "column": 11,
-                              "line": 23,
+                              "line": 19,
                             },
                           },
                           "type": "BlockStatement",
@@ -1655,26 +1385,26 @@ Object {
                 "loc": Object {
                   "end": Object {
                     "column": 32,
-                    "line": 7,
+                    "line": 3,
                   },
                   "indent": 0,
                   "lines": Lines {},
                   "start": Object {
                     "column": 15,
-                    "line": 7,
+                    "line": 3,
                   },
                 },
                 "object": Identifier {
                   "loc": Object {
                     "end": Object {
                       "column": 20,
-                      "line": 7,
+                      "line": 3,
                     },
                     "indent": 0,
                     "lines": Lines {},
                     "start": Object {
                       "column": 15,
-                      "line": 7,
+                      "line": 3,
                     },
                   },
                   "name": "React",
@@ -1684,13 +1414,13 @@ Object {
                   "loc": Object {
                     "end": Object {
                       "column": 32,
-                      "line": 7,
+                      "line": 3,
                     },
                     "indent": 0,
                     "lines": Lines {},
                     "start": Object {
                       "column": 21,
-                      "line": 7,
+                      "line": 3,
                     },
                   },
                   "name": "createClass",
@@ -1701,13 +1431,13 @@ Object {
               "loc": Object {
                 "end": Object {
                   "column": 2,
-                  "line": 30,
+                  "line": 26,
                 },
                 "indent": 0,
                 "lines": Lines {},
                 "start": Object {
                   "column": 15,
-                  "line": 7,
+                  "line": 3,
                 },
               },
               "type": "CallExpression",
@@ -1715,13 +1445,13 @@ Object {
             "loc": Object {
               "end": Object {
                 "column": 2,
-                "line": 30,
+                "line": 26,
               },
               "indent": 0,
               "lines": Lines {},
               "start": Object {
                 "column": 6,
-                "line": 7,
+                "line": 3,
               },
             },
             "type": "VariableDeclarator",
@@ -1731,13 +1461,13 @@ Object {
         "loc": Object {
           "end": Object {
             "column": 3,
-            "line": 30,
+            "line": 26,
           },
           "indent": 0,
           "lines": Lines {},
           "start": Object {
             "column": 0,
-            "line": 7,
+            "line": 3,
           },
         },
         "type": "VariableDeclaration",
@@ -1751,13 +1481,13 @@ Object {
         "loc": Object {
           "end": Object {
             "column": 22,
-            "line": 32,
+            "line": 28,
           },
           "indent": 0,
           "lines": Lines {},
           "start": Object {
             "column": 0,
-            "line": 32,
+            "line": 28,
           },
         },
         "type": "ExportDefaultDeclaration",
@@ -1767,7 +1497,7 @@ Object {
     "loc": Object {
       "end": Object {
         "column": 22,
-        "line": 32,
+        "line": 28,
       },
       "indent": 0,
       "lines": Lines {},
