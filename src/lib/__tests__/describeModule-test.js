@@ -4,18 +4,12 @@ const describeModule = require('../describeModule');
 
 function expectDescription(moduleName) {
   const astPath = `spec/fixtures/${moduleName}-ast.json`;
-  const descriptionPath = `spec/fixtures/${moduleName}-description.json`;
 
   const ast = JSON.parse(fs.readFileSync(astPath));
 
   const description = describeModule(moduleName, ast);
 
-  // for updating
-  // fs.writeFileSync(descriptionPath, JSON.stringify(description));
-
-  const expectedDescription = JSON.parse(fs.readFileSync(descriptionPath));
-
-  expect(description).toEqual(expectedDescription);
+  expect(description).toMatchSnapshot();
 }
 
 describe('describeModule', () => {

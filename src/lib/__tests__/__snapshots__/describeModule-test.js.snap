@@ -1,0 +1,95 @@
+exports[`describeModule should describe a simple component 1`] = `
+Object {
+  "description": "",
+  "exportsDefault": true,
+  "hasExports": true,
+  "methods": Array [
+    Object {
+      "docblock": null,
+      "modifiers": Array [],
+      "name": "_setup",
+      "params": Array [],
+      "returns": null,
+    },
+    Object {
+      "docblock": null,
+      "modifiers": Array [],
+      "name": "show",
+      "params": Array [],
+      "returns": null,
+    },
+  ],
+  "moduleName": "Button",
+  "namedExportNames": Array [],
+  "props": Object {
+    "disabled": Object {
+      "description": "",
+      "required": false,
+      "type": Object {
+        "name": "bool",
+      },
+    },
+    "height": Object {
+      "description": "",
+      "required": false,
+      "type": Object {
+        "name": "number",
+      },
+    },
+    "label": Object {
+      "description": "",
+      "required": false,
+      "type": Object {
+        "name": "string",
+      },
+    },
+    "level": Object {
+      "description": "",
+      "required": false,
+      "type": Object {
+        "name": "enum",
+        "value": Array [
+          Object {
+            "computed": false,
+            "value": "\"primary\"",
+          },
+          Object {
+            "computed": false,
+            "value": "\"secondary\"",
+          },
+          Object {
+            "computed": false,
+            "value": "\"tertiary\"",
+          },
+          Object {
+            "computed": false,
+            "value": "\"quaternary\"",
+          },
+          Object {
+            "computed": false,
+            "value": "\"text\"",
+          },
+          Object {
+            "computed": false,
+            "value": "\"icon\"",
+          },
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`describeModule should describe simple exports 1`] = `
+Object {
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "esExports",
+  "namedExportNames": Array [
+    "refConst",
+    "refFunc",
+    "inlineConst",
+    "inlineFunc",
+  ],
+}
+`;
