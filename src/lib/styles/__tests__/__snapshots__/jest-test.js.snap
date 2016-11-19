@@ -76,6 +76,7 @@ describe(\'UnsafeComponent\', () => {
   });
 
   xit(\'renders\', () => {
+    // $FlowFixMe
     const comp = <UnsafeComponent foo=\"TODO mock\" />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();

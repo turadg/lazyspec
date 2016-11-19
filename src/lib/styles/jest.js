@@ -34,8 +34,10 @@ function renderSnippet(unitName, props = {}) {
 
   const fn = automatable ? 'it' : 'xit';
 
+  const flowFix = automatable ? '' : '\n    // $FlowFixMe';
+
   return `
-  ${fn}('renders', () => {
+  ${fn}('renders', () => {${flowFix}
     const comp = <${unitName} ${propStrings.join(' ')} />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();
