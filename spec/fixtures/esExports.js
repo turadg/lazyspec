@@ -10,4 +10,8 @@ export const inlineConst = true;
 export function inlineFunc() {
 }
 
+export type SomeType = {
+  foo: string,
+};
+
 export default refConst;

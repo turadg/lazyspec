@@ -16,7 +16,9 @@ function nameExports({ declaration, specifiers }) {
 function describeAstExports(moduleName, ast) {
   const body = ast.program.body;
 
-  const namedExports = body.filter(node => node.type === 'ExportNamedDeclaration');
+  console.log('describeAstExports', body);
+
+  const namedExports = body.filter(node => node.type === 'ExportNamedDeclaration' && node.exportKind === 'value');
   const namedExportNames = _.flatMap(namedExports, nameExports);
 
   const defaultExport = body.find(node => node.type === 'ExportDefaultDeclaration');
