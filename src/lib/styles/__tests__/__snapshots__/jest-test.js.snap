@@ -1,5 +1,8 @@
 exports[`describeModule should describe a createClass component 1`] = `
-"describe(\'CreateClass\', () => {
+"import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+describe(\'CreateClass\', () => {
   it(\'exists\', () => {
     expect(CreateClass).toBeTruthy();
   });
@@ -13,15 +16,27 @@ exports[`describeModule should describe a createClass component 1`] = `
 `;
 
 exports[`describeModule should describe a stateless function component 1`] = `
-"describe(\'StatelessFunction\', () => {
+"import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+describe(\'StatelessFunction\', () => {
   it(\'exists\', () => {
     expect(StatelessFunction).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <StatelessFunction  />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });"
 `;
 
 exports[`describeModule should describe an ES6 component 1`] = `
-"describe(\'DefaultableComponent\', () => {
+"import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+describe(\'DefaultableComponent\', () => {
   it(\'exists\', () => {
     expect(DefaultableComponent).toBeTruthy();
   });
@@ -35,7 +50,10 @@ exports[`describeModule should describe an ES6 component 1`] = `
 `;
 
 exports[`describeModule should describe an ES6 with Flow component 1`] = `
-"describe(\'FlowComponent\', () => {
+"import React from \'react\';
+import renderer from \'react-test-renderer\';
+
+describe(\'FlowComponent\', () => {
   it(\'exists\', () => {
     expect(FlowComponent).toBeTruthy();
   });

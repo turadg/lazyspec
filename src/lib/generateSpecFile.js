@@ -17,12 +17,12 @@ function generateSpecFile(moduleName, specPath, unitPath, src, style = 'jest') {
 
   // why doesn't `relative` work without the slice?
   const importPath = path.relative(specPath, unitPath).slice(3);
-  const importLines = importDeclaration(moduleInfo, importPath);
+  const importLine = importDeclaration(moduleInfo, importPath);
 
   const fileContents = `/* @lazyspec (remove to manage manually) */
 /* @flow */
 /* eslint-disable max-len */
-${importLines}
+${importLine}
 
 ${spec}
 `;

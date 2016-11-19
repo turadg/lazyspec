@@ -15,7 +15,10 @@ function typeName(key, props) {
   return prop.type.name;
 }
 
-function renderSnippet(unitName, props) {
+
+// react-docgen doesn't parse stateless functions yet so props will be
+// undefined in that case, even if they are in the function signature
+function renderSnippet(unitName, props = {}) {
   const requiredKeys = Object.keys(props).filter(k => props[k].required);
 
   let automatable = true;
@@ -47,8 +50,7 @@ function unitStub(unitName, reactInfo) {
   });
 `];
 
-  // test for props because react-docgen doesn't parse stateless functions yet
-  if (reactInfo && reactInfo.props) {
+  if (reactInfo) {
     its.push(renderSnippet(unitName, reactInfo.props));
   }
 
@@ -57,6 +59,12 @@ function unitStub(unitName, reactInfo) {
 
 function specUnit({ exportsInfo, reactInfo }) {
   const parts = [];
+
+  if (reactInfo) {
+    parts.push(`import React from 'react';
+import renderer from 'react-test-renderer';
+`);
+  }
 
   if (exportsInfo.exportsDefault) {
     // React info only available on the default export

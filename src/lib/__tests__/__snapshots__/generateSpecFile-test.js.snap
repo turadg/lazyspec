@@ -4,9 +4,18 @@ exports[`generateSpecFile should describe a stateless function component 1`] = `
 /* eslint-disable max-len */
 import StatelessFunction from \'../StatelessFunction.js\';
 
+import React from \'react\';
+import renderer from \'react-test-renderer\';
+
 describe(\'StatelessFunction\', () => {
   it(\'exists\', () => {
     expect(StatelessFunction).toBeTruthy();
+  });
+
+  it(\'renders\', () => {
+    const comp = <StatelessFunction  />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
 "
@@ -16,10 +25,10 @@ exports[`generateSpecFile should describe an ES5 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* @flow */
 /* eslint-disable max-len */
+import CreateClass from \'../CreateClass.js\';
+
 import React from \'react\';
 import renderer from \'react-test-renderer\';
-
-import CreateClass from \'../CreateClass.js\';
 
 describe(\'CreateClass\', () => {
   it(\'exists\', () => {
@@ -39,10 +48,10 @@ exports[`generateSpecFile should describe an ES6 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* @flow */
 /* eslint-disable max-len */
+import DefaultableComponent from \'../DefaultableComponent.js\';
+
 import React from \'react\';
 import renderer from \'react-test-renderer\';
-
-import DefaultableComponent from \'../DefaultableComponent.js\';
 
 describe(\'DefaultableComponent\', () => {
   it(\'exists\', () => {
@@ -62,10 +71,10 @@ exports[`generateSpecFile should describe an ES6 with Flow component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* @flow */
 /* eslint-disable max-len */
+import FlowComponent from \'../FlowComponent.js\';
+
 import React from \'react\';
 import renderer from \'react-test-renderer\';
-
-import FlowComponent from \'../FlowComponent.js\';
 
 describe(\'FlowComponent\', () => {
   it(\'exists\', () => {
