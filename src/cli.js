@@ -10,7 +10,6 @@ const mkdirp = require('mkdirp');
 const describeModule = require('./lib/describeModule');
 const importDeclaration = require('./lib/importDeclaration');
 const specUnit = require('./lib/styles/jasmine');
-const parseModule = require('./lib/parseModule');
 
 const { unitToSpec } = require('./lib/layouts/loloTests');
 
@@ -39,13 +38,11 @@ const processUnit = (unitPath, src) => {
     }
   }
 
-  const ast = parseModule(unitPath, src);
-
   // '-' is not valid in a Javascript symbol and the separator isn't important for the spec
   const moduleName = pathInfo.name.replace('-', '');
-  const moduleInfo = describeModule(moduleName, ast);
+  const moduleInfo = describeModule(moduleName, src);
 
-  if (!moduleInfo.hasExports) {
+  if (!moduleInfo.exportsInfo.hasExports) {
     console.warn('No exports in', unitPath);
     return;
   }
@@ -74,15 +71,16 @@ ${jasmineSpec}
 };
 
 for (const unitPath of unitPaths) {
-  fs.readFile(unitPath, 'utf8', (err, src) => {
+  fs.readFile(unitPath, 'utf8', (err, srcBuffer) => {
     if (err) {
       console.log('Could not read', unitPath, err);
       return;
     }
     try {
+      const src = srcBuffer.toString();
       processUnit(unitPath, src);
     } catch (ex) {
-      console.error('Could not process unit', unitPath);
+      console.error('Could not process unit', unitPath, ex.stack);
     }
   });
 }

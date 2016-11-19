@@ -8,14 +8,14 @@ describe('${unitName}', () => {
 `;
 }
 
-function specUnit(moduleInfo) {
+function specUnit({ exportsInfo }) {
   const parts = [];
 
-  if (moduleInfo.exportsDefault) {
-    parts.push(shouldExist(moduleInfo.moduleName));
+  if (exportsInfo.exportsDefault) {
+    parts.push(shouldExist(exportsInfo.moduleName));
   }
 
-  for (const namedExport of moduleInfo.namedExportNames) {
+  for (const namedExport of exportsInfo.namedExportNames) {
     parts.push(shouldExist(namedExport));
   }
 

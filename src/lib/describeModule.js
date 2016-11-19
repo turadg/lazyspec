@@ -1,49 +1,23 @@
-const _ = require('lodash');
-
 const describeReact = require('./describeReact');
+const describeExports = require('./describeExports');
 
-function nameExports({ declaration, specifiers }) {
-  if (!declaration) {
-    return specifiers.map(s => s.exported.name);
-  } else if (declaration.id) {
-    return [declaration.id.name];
-  } else if (declaration.declarations) {
-    return declaration.declarations.map(d => d.id.name);
+function describeModule(moduleName, src) {
+  // Would be nice to not parse twice. So far making react-docgen work with
+  // the same AST has been a pain, but if this tool is too slow then that's a
+  // clear optimization to try.
+  const exportsInfo = describeExports(moduleName, src);
+  let reactInfo = null;
+  // will fail if there is no component
+  try {
+    reactInfo = describeReact(moduleName, src);
+  } catch (_e) {
+    // noop
   }
 
-  throw new Error('unknown named export type');
-}
-
-function describeExports(moduleName, ast) {
-  const body = ast.program.body;
-
-  const namedExports = body.filter(node => node.type === 'ExportNamedDeclaration');
-  const namedExportNames = _.flatMap(namedExports, nameExports);
-
-  const defaultExport = body.find(node => node.type === 'ExportDefaultDeclaration');
-
-  const defaultExportedAsName = _.includes(namedExportNames, moduleName);
-
-  // ignore default export if it's also exported by name
-  const exportsDefault = defaultExport && !defaultExportedAsName;
-
-  const hasExports = exportsDefault || namedExportNames.length > 0;
-
   return {
-    exportsDefault,
-    hasExports,
-    moduleName,
-    namedExportNames,
+    exportsInfo,
+    reactInfo,
   };
-}
-
-function describeModule(moduleName, ast) {
-  const description = describeExports(moduleName, ast);
-
-  const reactDescription = describeReact(ast);
-  Object.assign(description, reactDescription);
-
-  return description;
 }
 
 module.exports = describeModule;

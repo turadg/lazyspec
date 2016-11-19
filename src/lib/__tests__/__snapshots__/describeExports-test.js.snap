@@ -1,0 +1,40 @@
+exports[`describeExports should describe an ES5 component 1`] = `
+Object {
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "spec/fixtures/CreateClass.js",
+  "namedExportNames": Array [],
+}
+`;
+
+exports[`describeExports should describe an ES6 component 1`] = `
+Object {
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "spec/fixtures/DefaultableComponent.js",
+  "namedExportNames": Array [],
+}
+`;
+
+exports[`describeExports should describe an ES6 with Flow component 1`] = `
+Object {
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "spec/fixtures/FlowComponent.js",
+  "namedExportNames": Array [],
+}
+`;
+
+exports[`describeExports should describe simple exports 1`] = `
+Object {
+  "exportsDefault": true,
+  "hasExports": true,
+  "moduleName": "spec/fixtures/esExports.js",
+  "namedExportNames": Array [
+    "refConst",
+    "refFunc",
+    "inlineConst",
+    "inlineFunc",
+  ],
+}
+`;

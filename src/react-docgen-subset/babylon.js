@@ -32,7 +32,9 @@ var options = {
     'es7.doExpressions': true,
     'es7.functionBind': true
   },
-  plugins: { jsx: true, flow: true }
+  // MODIFIED FROM DIST
+  // plugins: { jsx: true, flow: true }
+  plugins: ['jsx', 'flow'],
 };
 
 exports.default = {

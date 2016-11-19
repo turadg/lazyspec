@@ -1,14 +1,11 @@
 const fs = require('fs');
 
 const describeModule = require('../../describeModule');
-const parseModule = require('../../parseModule');
 const specUnit = require('../jasmine');
 
 function expectSpec(moduleName) {
-  const unitPath = `spec/fixtures/${moduleName}.js`;
-  const src = fs.readFileSync(unitPath);
-  const ast = parseModule(unitPath, src);
-  const description = describeModule(moduleName, ast);
+  const src = fs.readFileSync(`spec/fixtures/${moduleName}.js`).toString();
+  const description = describeModule(moduleName, src);
 
   const spec = specUnit(description);
 
