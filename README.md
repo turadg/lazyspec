@@ -27,3 +27,9 @@ https://github.com/reactjs/react-docgen/blob/master/bin/react-docgen.js
 https://github.com/reactjs/react-docgen/blob/master/src/parse.js
 
 ./src/cli.js ~/Remind/r101-frontend/src/admin/components/
+
+
+1. set up test suite to use Jest instead of Jasmine
+2. use toMatchSnapshot for the ASTs
+3. make tests for React test renderers
+4. auto-generate tests from props

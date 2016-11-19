@@ -1,5 +1,5 @@
 const recast = require('recast');
-const babylon = require('../react-docgen-subset/babylon');
+const {babylon} = require('react-docgen');
 
 function parseModule(unitPath, src) {
   const ast = recast.parse(src, { esprima: babylon });

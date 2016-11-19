@@ -1,3 +1,35 @@
+"use strict";
+
+var _from = require("babel-runtime/core-js/array/from");
+
+var _from2 = _interopRequireDefault(_from);
+
+var _slicedToArray2 = require("babel-runtime/helpers/slicedToArray");
+
+var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
+var _getIterator2 = require("babel-runtime/core-js/get-iterator");
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _set = require("babel-runtime/core-js/set");
+
+var _set2 = _interopRequireDefault(_set);
+
+var _map = require("babel-runtime/core-js/map");
+
+var _map2 = _interopRequireDefault(_map);
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /*
  *  Copyright (c) 2015, Facebook, Inc.
  *  All rights reserved.
@@ -6,36 +38,20 @@
  *  LICENSE file in the root directory of this source tree. An additional grant
  *  of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ *  
  *
  */
 
-"use strict";
-
-var _createClass = require("babel-runtime/helpers/create-class")["default"];
-
-var _classCallCheck = require("babel-runtime/helpers/class-call-check")["default"];
-
-var _slicedToArray = require("babel-runtime/helpers/sliced-to-array")["default"];
-
-var _Map = require("babel-runtime/core-js/map")["default"];
-
-var _Set = require("babel-runtime/core-js/set")["default"];
-
-var _getIterator = require("babel-runtime/core-js/get-iterator")["default"];
-
-var _Array$from = require("babel-runtime/core-js/array/from")["default"];
-
-var Documentation = (function () {
+var Documentation = function () {
   function Documentation() {
-    _classCallCheck(this, Documentation);
+    (0, _classCallCheck3.default)(this, Documentation);
 
-    this._props = new _Map();
-    this._composes = new _Set();
-    this._data = new _Map();
+    this._props = new _map2.default();
+    this._composes = new _set2.default();
+    this._data = new _map2.default();
   }
 
-  _createClass(Documentation, [{
+  (0, _createClass3.default)(Documentation, [{
     key: "addComposes",
     value: function addComposes(moduleName) {
       this._composes.add(moduleName);
@@ -69,8 +85,8 @@ var Documentation = (function () {
       var _iteratorError = undefined;
 
       try {
-        for (var _iterator = _getIterator(this._data), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var _step$value = _slicedToArray(_step.value, 2);
+        for (var _iterator = (0, _getIterator3.default)(this._data), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var _step$value = (0, _slicedToArray3.default)(_step.value, 2);
 
           var key = _step$value[0];
           var value = _step$value[1];
@@ -82,8 +98,8 @@ var Documentation = (function () {
         _iteratorError = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator["return"]) {
-            _iterator["return"]();
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
           }
         } finally {
           if (_didIteratorError) {
@@ -99,8 +115,8 @@ var Documentation = (function () {
         var _iteratorError2 = undefined;
 
         try {
-          for (var _iterator2 = _getIterator(this._props), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-            var _step2$value = _slicedToArray(_step2.value, 2);
+          for (var _iterator2 = (0, _getIterator3.default)(this._props), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+            var _step2$value = (0, _slicedToArray3.default)(_step2.value, 2);
 
             var name = _step2$value[0];
             var descriptor = _step2$value[1];
@@ -112,8 +128,8 @@ var Documentation = (function () {
           _iteratorError2 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion2 && _iterator2["return"]) {
-              _iterator2["return"]();
+            if (!_iteratorNormalCompletion2 && _iterator2.return) {
+              _iterator2.return();
             }
           } finally {
             if (_didIteratorError2) {
@@ -124,13 +140,12 @@ var Documentation = (function () {
       }
 
       if (this._composes.size > 0) {
-        obj.composes = _Array$from(this._composes);
+        obj.composes = (0, _from2.default)(this._composes);
       }
       return obj;
     }
   }]);
-
   return Documentation;
-})();
+}();
 
 module.exports = Documentation;

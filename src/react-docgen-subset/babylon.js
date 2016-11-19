@@ -1,3 +1,8 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 /*
  *  Copyright (c) 2015, Facebook, Inc.
  *  All rights reserved.
@@ -8,9 +13,9 @@
  *
  */
 
-const babylon = require('babylon');
+var babylon = require('babylon');
 
-const options = {
+var options = {
   sourceType: 'module',
   strictMode: false,
   locations: true,
@@ -25,15 +30,15 @@ const options = {
     'es7.trailingFunctionCommas': true,
     'es7.objectRestSpread': true,
     'es7.doExpressions': true,
-    'es7.functionBind': true,
+    'es7.functionBind': true
   },
-  plugins: { jsx: true, flow: true },
+  plugins: { jsx: true, flow: true }
 };
 
-module.exports = {
-  parse(src) {
-    const file = babylon.parse(src, options);
+exports.default = {
+  parse: function parse(src) {
+    var file = babylon.parse(src, options);
     file.program.comments = file.comments;
     return file.program;
-  },
+  }
 };
