@@ -1,5 +1,5 @@
 const mockValues = {
-  bool: 'false',
+  bool: '{false}',
   string: '"mockstring"',
   any: '{undefined}',
   number: '{404}',
@@ -34,10 +34,8 @@ function renderSnippet(unitName, props = {}) {
 
   const fn = automatable ? 'it' : 'xit';
 
-  const flowFix = automatable ? '' : '\n    // $FlowFixMe';
-
   return `
-  ${fn}('renders', () => {${flowFix}
+  ${fn}('renders', () => {
     const comp = <${unitName} ${propStrings.join(' ')} />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();

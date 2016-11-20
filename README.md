@@ -18,18 +18,10 @@ lazyspec path/to/modules
 
 For every `.js` file under the path, lazyspec will generate a corresponding spec stub if there is none.
 
-## TODO
+In dev you can do, `./src/cli.js path/to/modules`.
 
-Support more than [Jasmine](http://jasmine.github.io/) style. If you need another style, please file an issue or PR.
+## Known Issues
 
-Shallow render React components when valid props can be generated. Using react-docgen.
-https://github.com/reactjs/react-docgen/blob/master/bin/react-docgen.js
-https://github.com/reactjs/react-docgen/blob/master/src/parse.js
+- Required props of functional stateless components aren't detected
 
-./src/cli.js ~/Remind/r101-frontend/src/admin/components/
-
-
-1. set up test suite to use Jest instead of Jasmine
-2. use toMatchSnapshot for the ASTs
-3. make tests for React test renderers
-4. auto-generate tests from props
+- Custom proptypes are never interpreted as required (e.g. `message: MessageInterfacePropType.isRequired`)
