@@ -32,7 +32,8 @@
     "lodash": "^4.15.0",
     "mkdirp": "^0.5.1",
     "react": "^15.3.1",
-    "react-docgen": "^2.12.1"
+    "react-docgen": "^2.12.1",
+    "yargs": "^6.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

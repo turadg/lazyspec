@@ -88,6 +88,13 @@ Object {
   "description": "",
   "methods": Array [],
   "props": Object {
+    "children": Object {
+      "description": "",
+      "required": true,
+      "type": Object {
+        "name": "element",
+      },
+    },
     "disabled": Object {
       "description": "",
       "required": false,
@@ -151,6 +158,13 @@ Object {
   "description": "",
   "methods": Array [],
   "props": Object {
+    "children": Object {
+      "description": "",
+      "flowType": Object {
+        "name": "any",
+      },
+      "required": true,
+    },
     "disabled": Object {
       "description": "",
       "flowType": Object {

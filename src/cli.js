@@ -2,6 +2,7 @@
 
 /* eslint-disable no-console */
 
+const _ = require('lodash');
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
@@ -11,10 +12,25 @@ const generateSpecFile = require('./lib/generateSpecFile');
 
 const { unitToSpec } = require('./lib/layouts/loloTests');
 
-const rootPath = process.argv[2];
+const argv = require('yargs')
+  .usage('Usage: $0 -t [system] <paths>')
+  .default('t', 'jest')
+  .describe('t', 'Testing type to target')
+  .example('$0 -t jest lib/ foo.js', 'generate Jest specs for lib/** and foo.js')
+  .demand(1)
+  .help('h')
+  .alias('h', 'help')
+  .argv;
 
-const unitPaths = glob.sync('/**/*.js?(x)', { root: rootPath })
+
+const argPaths = argv._;
+
+const dirPaths = p => glob.sync('/**/*.js?(x)', { root: p })
   .filter(src => src.indexOf('__tests__') === -1);
+
+const unitPaths = _.flatten(
+  argPaths.map(p => (fs.lstatSync(p).isDirectory() ? dirPaths(p) : p))
+);
 
 const lazyManaged = (specPath) => {
   const specSrc = fs.readFileSync(specPath, 'utf8');

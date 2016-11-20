@@ -1,24 +1,68 @@
 # LazySpec
 
-Automatically generate minimal spec files for Javascript modules.
+Automatically generate minimal spec files for Javascript modules. Works well with Jest snapshots to make painless tests. For example, given a test file `src/components/Button.jsx`,
+```
+import React from 'react';
 
-## Benefits
+class Button extends React.Component {
+  static propTypes = {
+    level: React.PropTypes.oneOf([
+      'primary', 'secondary', 'tertiary', 'quaternary', 'text', 'icon',
+    ]),
+    disabled: React.PropTypes.bool,
+    label: React.PropTypes.string.isRequired,
+    height: React.PropTypes.number,
+    children: React.PropTypes.element.isRequired,
+  };
 
-1. Easy to ensure every module has at least one test (import). It can be hooked into git-commit or an editor.
+  render() {
+    return (
+      <button disabled={this.props.disabled}>
+        <b>{this.props.label}</b>
+      </button>
+    );
+  }
+}
 
-2. Code coverage analysis requires importing. Without some test the module won't even be analyzed, inflating coverage metrics.
+export default Button;
+```
+
+it will generate `src/components/__tests__/Button-test.js`:
+```
+/* @lazyspec (remove to manage manually) */
+/* eslint-disable */
+import Button from '../Button.js';
+
+import React from 'react';
+import renderer from 'react-test-renderer';
+
+describe('Button', () => {
+  it('exists', () => {
+    expect(Button).toBeTruthy();
+  });
+
+  it('renders', () => {
+    const comp = <Button children="mockElement" label="mockString" />;
+    const tree = renderer.create(comp).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+```
 
 
 ## Usage
 
 ```
 npm install -g lazyspec
-lazyspec path/to/modules
+lazyspec path/to/fileOrDir
 ```
 
-For every `.js` file under the path, lazyspec will generate a corresponding spec stub if there is none.
+For every dir in the list, it will glob all the `.js` and `.jsx` `.js` and add them.
 
-In dev you can do, `./src/cli.js path/to/modules`.
+For each file, it will generate a spec and the `__tests__` dir if necessary. So far it only supports the Jest style layout but PRs for other test runners and layouts are welcomed!
+
+In dev you can do, `./src/cli.js path/to/fileOrDir`.
 
 ## Known Issues
 
