@@ -42,7 +42,7 @@ describe(\'SafeComponent\', () => {
   });
 
   it(\'renders\', () => {
-    const comp = <SafeComponent  />;
+    const comp = <SafeComponent children=\"mockElement\" />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -59,7 +59,7 @@ describe(\'FlowComponent\', () => {
   });
 
   it(\'renders\', () => {
-    const comp = <FlowComponent label=\"mockstring\" />;
+    const comp = <FlowComponent label=\"mockString\" children=\"mockAny\" />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();
   });

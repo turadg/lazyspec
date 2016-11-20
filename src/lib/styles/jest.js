@@ -1,10 +1,11 @@
 const mockValues = {
   bool: '{false}',
-  string: '"mockstring"',
-  any: '{undefined}',
+  string: '"mockString"',
+  any: '"mockAny"',
   number: '{404}',
   func: '{() => null}',
   array: '{[]}',
+  element: '"mockElement"',
 };
 
 function typeName(key, props) {

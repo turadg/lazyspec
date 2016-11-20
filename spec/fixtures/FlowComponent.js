@@ -3,6 +3,7 @@ import React from 'react';
 type Props = {
   disabled?: boolean,
   label: string,
+  children: any,
 };
 
 class SafeComponent extends React.Component {

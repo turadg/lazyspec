@@ -1,7 +1,6 @@
 exports[`generateSpecFile should describe a stateless function component 1`] = `
 "/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
+/* eslint-disable */
 import StatelessFunction from \'../StatelessFunction.js\';
 
 import React from \'react\';
@@ -23,8 +22,7 @@ describe(\'StatelessFunction\', () => {
 
 exports[`generateSpecFile should describe an ES5 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
+/* eslint-disable */
 import CreateClass from \'../CreateClass.js\';
 
 import React from \'react\';
@@ -46,8 +44,7 @@ describe(\'CreateClass\', () => {
 
 exports[`generateSpecFile should describe an ES6 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
+/* eslint-disable */
 import SafeComponent from \'../SafeComponent.js\';
 
 import React from \'react\';
@@ -59,7 +56,7 @@ describe(\'SafeComponent\', () => {
   });
 
   it(\'renders\', () => {
-    const comp = <SafeComponent  />;
+    const comp = <SafeComponent children=\"mockElement\" />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -69,8 +66,7 @@ describe(\'SafeComponent\', () => {
 
 exports[`generateSpecFile should describe an ES6 with Flow component 1`] = `
 "/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
+/* eslint-disable */
 import FlowComponent from \'../FlowComponent.js\';
 
 import React from \'react\';
@@ -82,7 +78,7 @@ describe(\'FlowComponent\', () => {
   });
 
   it(\'renders\', () => {
-    const comp = <FlowComponent label=\"mockstring\" />;
+    const comp = <FlowComponent label=\"mockString\" children=\"mockAny\" />;
     const tree = renderer.create(comp).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -92,8 +88,7 @@ describe(\'FlowComponent\', () => {
 
 exports[`generateSpecFile should describe an unsafe ES6 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
+/* eslint-disable */
 import UnsafeComponent from \'../UnsafeComponent.js\';
 
 import React from \'react\';
@@ -115,8 +110,7 @@ describe(\'UnsafeComponent\', () => {
 
 exports[`generateSpecFile should describe multi-exports 1`] = `
 "/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
+/* eslint-disable */
 import MultipleComponents, {Bold} from \'../MultipleComponents.js\';
 
 describe(\'MultipleComponents\', () => {
@@ -134,8 +128,7 @@ describe(\'Bold\', () => {
 
 exports[`generateSpecFile should describe simple exports 1`] = `
 "/* @lazyspec (remove to manage manually) */
-/* @flow */
-/* eslint-disable max-len */
+/* eslint-disable */
 import esExports, {refConst, refFunc, inlineConst, inlineFunc} from \'../esExports.js\';
 
 describe(\'esExports\', () => {

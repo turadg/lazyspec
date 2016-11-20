@@ -8,6 +8,7 @@ class SafeComponent extends React.Component {
     disabled: React.PropTypes.bool,
     label: React.PropTypes.string,
     height: React.PropTypes.number,
+    children: React.PropTypes.element.isRequired,
   };
 
   render() {
