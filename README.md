@@ -69,3 +69,5 @@ In dev you can do, `./src/cli.js path/to/fileOrDir`.
 - Required props of functional stateless components aren't detected
 
 - Custom proptypes are never interpreted as required (e.g. `message: MessageInterfacePropType.isRequired`)
+
+- Fails when more than one component is exported from a module. This is a limitation of underlying [react-docgen](https://github.com/reactjs/react-docgen).
