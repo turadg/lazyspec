@@ -1,6 +1,7 @@
 exports[`describeModule should describe a createClass component 1`] = `
 "import React from \'react\';
-import renderer from \'react-test-renderer\';
+import { shallow } from \'enzyme\';
+import { shallowToJson } from \'enzyme-to-json\';
 
 describe(\'CreateClass\', () => {
   it(\'exists\', () => {
@@ -9,15 +10,16 @@ describe(\'CreateClass\', () => {
 
   it(\'renders\', () => {
     const comp = <CreateClass  />;
-    const tree = renderer.create(comp).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(comp);
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });"
 `;
 
 exports[`describeModule should describe a stateless function component 1`] = `
 "import React from \'react\';
-import renderer from \'react-test-renderer\';
+import { shallow } from \'enzyme\';
+import { shallowToJson } from \'enzyme-to-json\';
 
 describe(\'StatelessFunction\', () => {
   it(\'exists\', () => {
@@ -26,15 +28,16 @@ describe(\'StatelessFunction\', () => {
 
   it(\'renders\', () => {
     const comp = <StatelessFunction  />;
-    const tree = renderer.create(comp).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(comp);
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });"
 `;
 
 exports[`describeModule should describe an ES6 component 1`] = `
 "import React from \'react\';
-import renderer from \'react-test-renderer\';
+import { shallow } from \'enzyme\';
+import { shallowToJson } from \'enzyme-to-json\';
 
 describe(\'SafeComponent\', () => {
   it(\'exists\', () => {
@@ -43,15 +46,16 @@ describe(\'SafeComponent\', () => {
 
   it(\'renders\', () => {
     const comp = <SafeComponent children=\"mockElement\" />;
-    const tree = renderer.create(comp).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(comp);
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });"
 `;
 
 exports[`describeModule should describe an ES6 with Flow component 1`] = `
 "import React from \'react\';
-import renderer from \'react-test-renderer\';
+import { shallow } from \'enzyme\';
+import { shallowToJson } from \'enzyme-to-json\';
 
 describe(\'FlowComponent\', () => {
   it(\'exists\', () => {
@@ -60,15 +64,16 @@ describe(\'FlowComponent\', () => {
 
   it(\'renders\', () => {
     const comp = <FlowComponent label=\"mockString\" children=\"mockAny\" />;
-    const tree = renderer.create(comp).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(comp);
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });"
 `;
 
 exports[`describeModule should describe an unsafe ES6 component 1`] = `
 "import React from \'react\';
-import renderer from \'react-test-renderer\';
+import { shallow } from \'enzyme\';
+import { shallowToJson } from \'enzyme-to-json\';
 
 describe(\'UnsafeComponent\', () => {
   it(\'exists\', () => {
@@ -77,8 +82,8 @@ describe(\'UnsafeComponent\', () => {
 
   xit(\'renders\', () => {
     const comp = <UnsafeComponent foo=\"TODO mock\" />;
-    const tree = renderer.create(comp).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(comp);
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });"
 `;

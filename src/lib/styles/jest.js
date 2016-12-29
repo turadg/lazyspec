@@ -38,8 +38,8 @@ function renderSnippet(unitName, props = {}) {
   return `
   ${fn}('renders', () => {
     const comp = <${unitName} ${propStrings.join(' ')} />;
-    const tree = renderer.create(comp).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(comp);
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 `;
 }
@@ -63,7 +63,8 @@ function specUnit({ exportsInfo, reactInfo }) {
 
   if (reactInfo) {
     parts.push(`import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 `);
   }
 
