@@ -13,7 +13,7 @@ function expectDescription(moduleName) {
 describe('describeReact', () => {
   it('should describe simple exports', () => {
     expect(
-      () => expectDescription('esExports')
+      () => expectDescription('esExports'),
     ).toThrow();
   });
 
@@ -40,7 +40,7 @@ describe('describeReact', () => {
   // Not currently supported by react-docgen
   it('should not describe multi-exports', () => {
     expect(
-      () => expectDescription('MultipleComponents')
+      () => expectDescription('MultipleComponents'),
     ).toThrowError('Multiple exported component definitions found.');
   });
 });

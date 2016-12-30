@@ -2,7 +2,5 @@
   extends:
     - airbnb-base
   parser: babel-eslint
-  plugins:
-    - jasmine
   env:
-    jasmine: true
+    jest: true

@@ -29,7 +29,7 @@ const dirPaths = p => glob.sync('/**/*.js?(x)', { root: p })
   .filter(src => src.indexOf('__tests__') === -1);
 
 const unitPaths = _.flatten(
-  argPaths.map(p => (fs.lstatSync(p).isDirectory() ? dirPaths(p) : p))
+  argPaths.map(p => (fs.lstatSync(p).isDirectory() ? dirPaths(p) : p)),
 );
 
 const lazyManaged = (specPath) => {
