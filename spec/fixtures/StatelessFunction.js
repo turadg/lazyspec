@@ -1,1 +1,2 @@
-export default ({ children }) => <span>{ children }</span>;
+export default ({ children, className = 'default' }) =>
+  <span className={className}>{ children }</span>;

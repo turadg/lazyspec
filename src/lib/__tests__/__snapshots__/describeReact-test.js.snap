@@ -2,6 +2,14 @@ exports[`describeReact should describe a stateless function component 1`] = `
 Object {
   "description": "",
   "methods": Array [],
+  "props": Object {
+    "className": Object {
+      "defaultValue": Object {
+        "computed": false,
+        "value": "\'default\'",
+      },
+    },
+  },
 }
 `;
 
