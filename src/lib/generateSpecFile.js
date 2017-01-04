@@ -16,7 +16,8 @@ function generateSpecFile(moduleName, specPath, unitPath, src, style = 'jest') {
   const spec = specUnit(moduleInfo);
 
   // why doesn't `relative` work without the slice?
-  const importPath = path.relative(specPath, unitPath).slice(3);
+  const importPath = path.relative(specPath, unitPath).slice(3)
+    .replace(/\\/g, '/'); // convert backslashes on windows
   const importLine = importDeclaration(moduleInfo, importPath);
 
   const fileContents = `/* @lazyspec (remove to manage manually) */
