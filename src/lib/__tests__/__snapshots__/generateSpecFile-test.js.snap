@@ -1,18 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`generateSpecFile should describe a stateless function component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* eslint-disable */
-import StatelessFunction from \'../StatelessFunction.js\';
+import StatelessFunction from '../StatelessFunction.js';
 
-import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'StatelessFunction\', () => {
-  it(\'exists\', () => {
+describe('StatelessFunction', () => {
+  it('exists', () => {
     expect(StatelessFunction).toBeTruthy();
   });
 
-  it(\'renders\', () => {
+  it('renders', () => {
     const comp = <StatelessFunction  />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
@@ -24,18 +26,18 @@ describe(\'StatelessFunction\', () => {
 exports[`generateSpecFile should describe an ES5 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* eslint-disable */
-import CreateClass from \'../CreateClass.js\';
+import CreateClass from '../CreateClass.js';
 
-import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'CreateClass\', () => {
-  it(\'exists\', () => {
+describe('CreateClass', () => {
+  it('exists', () => {
     expect(CreateClass).toBeTruthy();
   });
 
-  it(\'renders\', () => {
+  it('renders', () => {
     const comp = <CreateClass  />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
@@ -47,19 +49,19 @@ describe(\'CreateClass\', () => {
 exports[`generateSpecFile should describe an ES6 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* eslint-disable */
-import SafeComponent from \'../SafeComponent.js\';
+import SafeComponent from '../SafeComponent.js';
 
-import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'SafeComponent\', () => {
-  it(\'exists\', () => {
+describe('SafeComponent', () => {
+  it('exists', () => {
     expect(SafeComponent).toBeTruthy();
   });
 
-  it(\'renders\', () => {
-    const comp = <SafeComponent children=\"mockElement\" />;
+  it('renders', () => {
+    const comp = <SafeComponent children=\\"mockElement\\" />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
@@ -70,19 +72,19 @@ describe(\'SafeComponent\', () => {
 exports[`generateSpecFile should describe an ES6 with Flow component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* eslint-disable */
-import FlowComponent from \'../FlowComponent.js\';
+import FlowComponent from '../FlowComponent.js';
 
-import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'FlowComponent\', () => {
-  it(\'exists\', () => {
+describe('FlowComponent', () => {
+  it('exists', () => {
     expect(FlowComponent).toBeTruthy();
   });
 
-  it(\'renders\', () => {
-    const comp = <FlowComponent label=\"mockString\" children=\"mockAny\" />;
+  it('renders', () => {
+    const comp = <FlowComponent label=\\"mockString\\" children=\\"mockAny\\" />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
@@ -93,19 +95,19 @@ describe(\'FlowComponent\', () => {
 exports[`generateSpecFile should describe an unsafe ES6 component 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* eslint-disable */
-import UnsafeComponent from \'../UnsafeComponent.js\';
+import UnsafeComponent from '../UnsafeComponent.js';
 
-import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'UnsafeComponent\', () => {
-  it(\'exists\', () => {
+describe('UnsafeComponent', () => {
+  it('exists', () => {
     expect(UnsafeComponent).toBeTruthy();
   });
 
-  xit(\'renders\', () => {
-    const comp = <UnsafeComponent foo=\"TODO mock\" />;
+  xit('renders', () => {
+    const comp = <UnsafeComponent foo=\\"TODO mock\\" />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
@@ -116,15 +118,15 @@ describe(\'UnsafeComponent\', () => {
 exports[`generateSpecFile should describe multi-exports 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* eslint-disable */
-import MultipleComponents, {Bold} from \'../MultipleComponents.js\';
+import MultipleComponents, {Bold} from '../MultipleComponents.js';
 
-describe(\'MultipleComponents\', () => {
-  it(\'exists\', () => {
+describe('MultipleComponents', () => {
+  it('exists', () => {
     expect(MultipleComponents).toBeTruthy();
   });
 });
-describe(\'Bold\', () => {
-  it(\'exists\', () => {
+describe('Bold', () => {
+  it('exists', () => {
     expect(Bold).toBeTruthy();
   });
 });
@@ -134,30 +136,30 @@ describe(\'Bold\', () => {
 exports[`generateSpecFile should describe simple exports 1`] = `
 "/* @lazyspec (remove to manage manually) */
 /* eslint-disable */
-import esExports, {refConst, refFunc, inlineConst, inlineFunc} from \'../esExports.js\';
+import esExports, {refConst, refFunc, inlineConst, inlineFunc} from '../esExports.js';
 
-describe(\'esExports\', () => {
-  it(\'exists\', () => {
+describe('esExports', () => {
+  it('exists', () => {
     expect(esExports).toBeTruthy();
   });
 });
-describe(\'refConst\', () => {
-  it(\'exists\', () => {
+describe('refConst', () => {
+  it('exists', () => {
     expect(refConst).toBeTruthy();
   });
 });
-describe(\'refFunc\', () => {
-  it(\'exists\', () => {
+describe('refFunc', () => {
+  it('exists', () => {
     expect(refFunc).toBeTruthy();
   });
 });
-describe(\'inlineConst\', () => {
-  it(\'exists\', () => {
+describe('inlineConst', () => {
+  it('exists', () => {
     expect(inlineConst).toBeTruthy();
   });
 });
-describe(\'inlineFunc\', () => {
-  it(\'exists\', () => {
+describe('inlineFunc', () => {
+  it('exists', () => {
     expect(inlineFunc).toBeTruthy();
   });
 });

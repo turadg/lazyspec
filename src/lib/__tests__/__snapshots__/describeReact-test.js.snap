@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`describeReact should describe a stateless function component 1`] = `
 Object {
   "description": "",
@@ -6,7 +8,7 @@ Object {
     "className": Object {
       "defaultValue": Object {
         "computed": false,
-        "value": "\'default\'",
+        "value": "'default'",
       },
     },
   },
@@ -62,27 +64,27 @@ Object {
         "value": Array [
           Object {
             "computed": false,
-            "value": "\'primary\'",
+            "value": "'primary'",
           },
           Object {
             "computed": false,
-            "value": "\'secondary\'",
+            "value": "'secondary'",
           },
           Object {
             "computed": false,
-            "value": "\'tertiary\'",
+            "value": "'tertiary'",
           },
           Object {
             "computed": false,
-            "value": "\'quaternary\'",
+            "value": "'quaternary'",
           },
           Object {
             "computed": false,
-            "value": "\'text\'",
+            "value": "'text'",
           },
           Object {
             "computed": false,
-            "value": "\'icon\'",
+            "value": "'icon'",
           },
         ],
       },
@@ -132,27 +134,27 @@ Object {
         "value": Array [
           Object {
             "computed": false,
-            "value": "\'primary\'",
+            "value": "'primary'",
           },
           Object {
             "computed": false,
-            "value": "\'secondary\'",
+            "value": "'secondary'",
           },
           Object {
             "computed": false,
-            "value": "\'tertiary\'",
+            "value": "'tertiary'",
           },
           Object {
             "computed": false,
-            "value": "\'quaternary\'",
+            "value": "'quaternary'",
           },
           Object {
             "computed": false,
-            "value": "\'text\'",
+            "value": "'text'",
           },
           Object {
             "computed": false,
-            "value": "\'icon\'",
+            "value": "'icon'",
           },
         ],
       },

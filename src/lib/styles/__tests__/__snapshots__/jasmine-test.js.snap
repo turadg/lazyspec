@@ -1,7 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`describeModule should describe a createClass component 1`] = `
 "
-describe(\'CreateClass\', () => {
-  it(\'should exist\', () => {
+describe('CreateClass', () => {
+  it('should exist', () => {
     expect(CreateClass).toBeTruthy();
   });
 });
@@ -10,36 +12,36 @@ describe(\'CreateClass\', () => {
 
 exports[`describeModule should describe simple exports 1`] = `
 "
-describe(\'esExports\', () => {
-  it(\'should exist\', () => {
+describe('esExports', () => {
+  it('should exist', () => {
     expect(esExports).toBeTruthy();
   });
 });
 
 
-describe(\'refConst\', () => {
-  it(\'should exist\', () => {
+describe('refConst', () => {
+  it('should exist', () => {
     expect(refConst).toBeTruthy();
   });
 });
 
 
-describe(\'refFunc\', () => {
-  it(\'should exist\', () => {
+describe('refFunc', () => {
+  it('should exist', () => {
     expect(refFunc).toBeTruthy();
   });
 });
 
 
-describe(\'inlineConst\', () => {
-  it(\'should exist\', () => {
+describe('inlineConst', () => {
+  it('should exist', () => {
     expect(inlineConst).toBeTruthy();
   });
 });
 
 
-describe(\'inlineFunc\', () => {
-  it(\'should exist\', () => {
+describe('inlineFunc', () => {
+  it('should exist', () => {
     expect(inlineFunc).toBeTruthy();
   });
 });

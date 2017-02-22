@@ -1,14 +1,16 @@
-exports[`describeModule should describe a createClass component 1`] = `
-"import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-describe(\'CreateClass\', () => {
-  it(\'exists\', () => {
+exports[`describeModule should describe a createClass component 1`] = `
+"import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
+
+describe('CreateClass', () => {
+  it('exists', () => {
     expect(CreateClass).toBeTruthy();
   });
 
-  it(\'renders\', () => {
+  it('renders', () => {
     const comp = <CreateClass  />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
@@ -17,16 +19,16 @@ describe(\'CreateClass\', () => {
 `;
 
 exports[`describeModule should describe a stateless function component 1`] = `
-"import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+"import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'StatelessFunction\', () => {
-  it(\'exists\', () => {
+describe('StatelessFunction', () => {
+  it('exists', () => {
     expect(StatelessFunction).toBeTruthy();
   });
 
-  it(\'renders\', () => {
+  it('renders', () => {
     const comp = <StatelessFunction  />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
@@ -35,17 +37,17 @@ describe(\'StatelessFunction\', () => {
 `;
 
 exports[`describeModule should describe an ES6 component 1`] = `
-"import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+"import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'SafeComponent\', () => {
-  it(\'exists\', () => {
+describe('SafeComponent', () => {
+  it('exists', () => {
     expect(SafeComponent).toBeTruthy();
   });
 
-  it(\'renders\', () => {
-    const comp = <SafeComponent children=\"mockElement\" />;
+  it('renders', () => {
+    const comp = <SafeComponent children=\\"mockElement\\" />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
@@ -53,17 +55,17 @@ describe(\'SafeComponent\', () => {
 `;
 
 exports[`describeModule should describe an ES6 with Flow component 1`] = `
-"import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+"import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'FlowComponent\', () => {
-  it(\'exists\', () => {
+describe('FlowComponent', () => {
+  it('exists', () => {
     expect(FlowComponent).toBeTruthy();
   });
 
-  it(\'renders\', () => {
-    const comp = <FlowComponent label=\"mockString\" children=\"mockAny\" />;
+  it('renders', () => {
+    const comp = <FlowComponent label=\\"mockString\\" children=\\"mockAny\\" />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
@@ -71,17 +73,17 @@ describe(\'FlowComponent\', () => {
 `;
 
 exports[`describeModule should describe an unsafe ES6 component 1`] = `
-"import React from \'react\';
-import { shallow } from \'enzyme\';
-import { shallowToJson } from \'enzyme-to-json\';
+"import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-describe(\'UnsafeComponent\', () => {
-  it(\'exists\', () => {
+describe('UnsafeComponent', () => {
+  it('exists', () => {
     expect(UnsafeComponent).toBeTruthy();
   });
 
-  xit(\'renders\', () => {
-    const comp = <UnsafeComponent foo=\"TODO mock\" />;
+  xit('renders', () => {
+    const comp = <UnsafeComponent foo=\\"TODO mock\\" />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
@@ -89,28 +91,28 @@ describe(\'UnsafeComponent\', () => {
 `;
 
 exports[`describeModule should describe simple exports 1`] = `
-"describe(\'esExports\', () => {
-  it(\'exists\', () => {
+"describe('esExports', () => {
+  it('exists', () => {
     expect(esExports).toBeTruthy();
   });
 });
-describe(\'refConst\', () => {
-  it(\'exists\', () => {
+describe('refConst', () => {
+  it('exists', () => {
     expect(refConst).toBeTruthy();
   });
 });
-describe(\'refFunc\', () => {
-  it(\'exists\', () => {
+describe('refFunc', () => {
+  it('exists', () => {
     expect(refFunc).toBeTruthy();
   });
 });
-describe(\'inlineConst\', () => {
-  it(\'exists\', () => {
+describe('inlineConst', () => {
+  it('exists', () => {
     expect(inlineConst).toBeTruthy();
   });
 });
-describe(\'inlineFunc\', () => {
-  it(\'exists\', () => {
+describe('inlineFunc', () => {
+  it('exists', () => {
     expect(inlineFunc).toBeTruthy();
   });
 });"
