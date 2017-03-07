@@ -1,6 +1,6 @@
 {
   "name": "lazyspec",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Generate minimal unit tests automatically",
   "bin": {
     "lazyspec": "./src/cli.js"
