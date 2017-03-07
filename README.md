@@ -66,8 +66,6 @@ In dev you can do, `./src/cli.js path/to/fileOrDir`.
 
 ## Known Issues
 
-- Required props of functional stateless components aren't detected
-
 - Custom proptypes are never interpreted as required (e.g. `message: MessageInterfacePropType.isRequired`)
 
 - Fails when more than one component is exported from a module. [react-docgen](https://github.com/reactjs/react-docgen) now has `findAllExportedComponentDefinitions`, but we don't use it because modules often export a HOC and its base component so it would be redundant. Eventually this tool could detect which is the HOC and omit it.

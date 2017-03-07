@@ -15,7 +15,7 @@ describe('StatelessFunction', () => {
   });
 
   it('renders', () => {
-    const comp = <StatelessFunction  />;
+    const comp = <StatelessFunction className=\\"mockString\\" />;
     const wrapper = shallow(comp);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
