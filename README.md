@@ -64,6 +64,11 @@ For each file, it will generate a spec and the `__tests__` dir if necessary. So 
 
 In dev you can do, `./src/cli.js path/to/fileOrDir`.
 
+## Editor integration
+
+- for Sublime Text, https://github.com/turadg/sublime-react-ide
+
+
 ## Known Issues
 
 - Custom proptypes are never interpreted as required (e.g. `message: MessageInterfacePropType.isRequired`)
