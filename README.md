@@ -1,7 +1,7 @@
 # LazySpec
 
 Automatically generate minimal spec files for Javascript modules. Works well with Jest snapshots to make painless tests. For example, given a test file `src/components/Button.jsx`,
-```
+```js
 import React from 'react';
 
 class Button extends React.Component {
@@ -28,7 +28,7 @@ export default Button;
 ```
 
 it will generate `src/components/__tests__/Button-test.js`:
-```
+```js
 /* @lazyspec (remove to manage manually) */
 /* eslint-disable */
 import Button from '../Button.js';
