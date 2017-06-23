@@ -40,7 +40,7 @@
     "enzyme": "^2.7.0",
     "eslint": "^3.12.2",
     "eslint-config-airbnb-base": "^11.0.0",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-import": "^2.6.0",
     "jest": "^19.0.1"
   }
 }
