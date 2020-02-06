@@ -32,7 +32,7 @@
     "lodash": "^4.17.3",
     "mkdirp": "^1.0.0",
     "react": "^15.4.1",
-    "react-docgen": "^2.13.0",
+    "react-docgen": "^5.2.0",
     "yargs": "^8.0.1"
   },
   "devDependencies": {
